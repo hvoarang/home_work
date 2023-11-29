@@ -1,43 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>home_work</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800&family=Rubik:wght@500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./CSS/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/CSS/style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <h1>homework CSS</h1>
-      <div>
-        <h2>task 1</h2>
-        <p><b>Теория к заданию</b></p>
-        <p>
-          Внешние CSS файлы подключаются к странице в теге head, используя тег
-          link.
-        </p>
-        <code>
-          <html lang="en">
-            <head>
-              <meta charset="UTF-8" />
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1.0"
-              />
-              <title>Document</title>
-            </head>
-            <body></body>
-          </html>
-        </code>
-      </div>
+    <h2>homework CSS</h2>
 
-      <script src="./js/script.js"></script>
+    <button class="accordion">task 1</button>
+    <div class="panel">
+      <h3>Теория к заданию</h3>
+      <p>
+        Внешние CSS файлы подключаются к странице в теге head, используя тег
+        link.
+      </p>
+      <p>
+        &lt;!DOCTYPE html&gt; <br />&lt;html lang=&quot;en&quot;&gt; <br />
+        &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; <br />&lt;meta
+        name=&quot;viewport&quot; content=&quot;width=device-width,
+        initial-scale=1.0&quot;&gt; <br />&lt;title&gt;Document&lt;/title&gt;
+        <br />
+        &lt;/head&gt; <br />&lt;body&gt;<br /><br />
+        &lt;/body&gt; <br />&lt;/html&gt;
+      </p>
+      <h4>Задание</h4>
+      <p>Напишите элемент link для подключения внешнего файла</p>
+      <ul>
+        <li>
+          который ищет внешний файл с помощью атрибута href по относительному
+          пути css/styles.css;
+        </li>
+        <li>содержит атрибут rel со значением stylesheet.</li>
+      </ul>
     </div>
+
+    <button class="accordion">task 2</button>
+    <div class="panel">
+      <h3>Теория к заданию</h3>
+      <img src="/images/css-rules.png" alt="" />
+      <p class="warning">
+        Внимание Всегда добавляйте точку с запятой во всех CSS правилах, даже
+        если синтаксис позволяет не добавлять ';' для последнего правила.
+      </p>
+      <h4>Задание</h4>
+      <p>
+        Для селектора <b>P</b> задайте свойство color и значение
+        <span class="red">red</span>, свойство <b>font-size</b> и значение
+        <b>20px</b>;
+      </p>
+      <p></p>
+      &lt;p&gt;В браузере по умолчанию цвет текста черный&lt;/p&gt; <br />
+      &lt;p&gt;В браузере по умолчанию размер шрифта 16px&lt;/p&gt; <br />
+    </div>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
