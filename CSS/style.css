@@ -1,9 +1,11 @@
 body {
+  background-color: rgba(10, 20, 30, 1.48);
   font-family: "Roboto";
   font-size: 20px;
 }
 
 h2 {
+  color: #fff;
   text-align: center;
 }
 
@@ -50,13 +52,15 @@ img {
   -webkit-box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
   -moz-box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
 
+
+
 }
 
 .panel {
   border-radius: 8px;
   padding: 0 18px;
   display: none;
-  background-color: white;
+  background-color: #ffffff;
   overflow: hidden;
 
   box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
