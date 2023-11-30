@@ -2,1219 +2,1255 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800&family=Roboto+Slab:wght@200;300;400;600;800;900&family=Rubik:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
   <body>
     <h2>homework CSS</h2>
+    <div class="wrapper">
+      <button class="accordion">task 1</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Внешние CSS файлы подключаются к странице в теге head, используя тег
+          link.
+        </p>
+        <p>
+          &lt;!DOCTYPE html&gt; <br />&lt;html lang=&quot;en&quot;&gt; <br />
+          &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; <br />&lt;meta
+          name=&quot;viewport&quot; content=&quot;width=device-width,
+          initial-scale=1.0&quot;&gt; <br />&lt;title&gt;Document&lt;/title&gt;
+          <br />
+          &lt;/head&gt; <br />&lt;body&gt;<br /><br />
+          &lt;/body&gt; <br />&lt;/html&gt;
+        </p>
+        <h4>Задание</h4>
+        <p>Напишите элемент link для подключения внешнего файла</p>
+        <ul>
+          <li>
+            который ищет внешний файл с помощью атрибута href по относительному
+            пути css/styles.css;
+          </li>
+          <li>содержит атрибут rel со значением stylesheet.</li>
+        </ul>
+      </div>
 
-    <button class="accordion">task 1</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Внешние CSS файлы подключаются к странице в теге head, используя тег
-        link.
-      </p>
-      <p>
-        &lt;!DOCTYPE html&gt; <br />&lt;html lang=&quot;en&quot;&gt; <br />
-        &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; <br />&lt;meta
-        name=&quot;viewport&quot; content=&quot;width=device-width,
-        initial-scale=1.0&quot;&gt; <br />&lt;title&gt;Document&lt;/title&gt;
-        <br />
-        &lt;/head&gt; <br />&lt;body&gt;<br /><br />
-        &lt;/body&gt; <br />&lt;/html&gt;
-      </p>
-      <h4>Задание</h4>
-      <p>Напишите элемент link для подключения внешнего файла</p>
-      <ul>
-        <li>
-          который ищет внешний файл с помощью атрибута href по относительному
-          пути css/styles.css;
-        </li>
-        <li>содержит атрибут rel со значением stylesheet.</li>
-      </ul>
-    </div>
+      <button class="accordion">task 2</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <img src="./images/css-rules.png" alt="" />
+        <p class="warning">
+          Внимание Всегда добавляйте точку с запятой во всех CSS правилах, даже
+          если синтаксис позволяет не добавлять ';' для последнего правила.
+        </p>
+        <h4>Задание</h4>
+        <p>
+          Для селектора <b>P</b> задайте свойство color и значение
+          <span class="red">red</span>, свойство <b>font-size</b> и значение
+          <b>20px</b>;
+        </p>
+        <p>
+          &lt;p&gt;В браузере по умолчанию цвет текста черный&lt;/p&gt; <br />
+          &lt;p&gt;В браузере по умолчанию размер шрифта 16px&lt;/p&gt; <br />
+        </p>
+      </div>
 
-    <button class="accordion">task 2</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <img src="./images/css-rules.png" alt="" />
-      <p class="warning">
-        Внимание Всегда добавляйте точку с запятой во всех CSS правилах, даже
-        если синтаксис позволяет не добавлять ';' для последнего правила.
-      </p>
-      <h4>Задание</h4>
-      <p>
-        Для селектора <b>P</b> задайте свойство color и значение
-        <span class="red">red</span>, свойство <b>font-size</b> и значение
-        <b>20px</b>;
-      </p>
-      <p>
-        &lt;p&gt;В браузере по умолчанию цвет текста черный&lt;/p&gt; <br />
-        &lt;p&gt;В браузере по умолчанию размер шрифта 16px&lt;/p&gt; <br />
-      </p>
-    </div>
+      <button class="accordion">task 3</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Многие элементы (заголовки к примеру) имеют установленные браузером
+          margin и padding. Удобно производить сброс этих значений до 0. Для
+          этой цели подходит селектор с наименьшим приоритетом и одновременно
+          такой, что задает правила для всех элементов (исключая псевдоэлементы,
+          но об этом позже). Такой селектор задается символом * - т.е. любой
+          элемент. Приоритет у такого селектора минимальный (без ранга).
+        </p>
+        <p class="warning">
+          Если значение какого-либо свойства равно 0, то указывать единицу
+          измерения, вроде `px` не обязательно и даже нежелательно.
+        </p>
+        <h4>Задание</h4>
+        <p>
+          Для селектора * (любой элемент) задай свойство margin и значение 0,
+          свойство padding и значение 0;
+        </p>
+        <p>
+          &lt;ul&gt; <br />
+          &lt;li&gt;По умолчанию многие элементы (например заголовки) могут
+          иметь значения `margin` отличные от `0`&lt;/li&gt; <br />
+          &lt;li&gt;По умолчанию у списка `padding-left` равен `40px`&lt;/li&gt;
+          <br />
+          &lt;/ul&gt;
+        </p>
+      </div>
 
-    <button class="accordion">task 3</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Многие элементы (заголовки к примеру) имеют установленные браузером
-        margin и padding. Удобно производить сброс этих значений до 0. Для этой
-        цели подходит селектор с наименьшим приоритетом и одновременно такой,
-        что задает правила для всех элементов (исключая псевдоэлементы, но об
-        этом позже). Такой селектор задается символом * - т.е. любой элемент.
-        Приоритет у такого селектора минимальный (без ранга).
-      </p>
-      <p class="warning">
-        Если значение какого-либо свойства равно 0, то указывать единицу
-        измерения, вроде `px` не обязательно и даже нежелательно.
-      </p>
-      <h4>Задание</h4>
-      <p>
-        Для селектора * (любой элемент) задай свойство margin и значение 0,
-        свойство padding и значение 0;
-      </p>
-      <p>
-        &lt;ul&gt; <br />
-        &lt;li&gt;По умолчанию многие элементы (например заголовки) могут иметь
-        значения `margin` отличные от `0`&lt;/li&gt; <br />
-        &lt;li&gt;По умолчанию у списка `padding-left` равен `40px`&lt;/li&gt;
-        <br />
-        &lt;/ul&gt;
-      </p>
-    </div>
+      <button class="accordion">task 4</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Приоритет 4-го ранга минимальный (но он выше селектора без ранга). 4-й
+          ранг принадлежит селекторам элемента и псевдоэлемента (что это -
+          узнаем позднее).
+        </p>
+        <p class="warning">
+          Селектор тега использовать нежелательно. Подходящим случаем для выбора
+          тега в качестве селектора является необходимость отмены или обнуления
+          стилей внутри документа.
+        </p>
+        <h4>Задание</h4>
+        <p>
+          Для тега li отмени свойство list-style с помощью значения none. Задай
+          свойству color значение green; Убедись на примере изменения цвета
+          текста, что у тега более высокий приоритет, чем у *.
+        </p>
+        <p>
+          &lt;ol&gt; <br />
+          &lt;li&gt;У списка можно отменить оформление по умолчанию&lt;/li&gt;
+          <br />
+          &lt;li&gt;У списка можно отменить оформление по умолчанию&lt;/li&gt;
+          <br />
+          &lt;/ol&gt; <br />&lt;ul&gt;<br />
+          &lt;li&gt;У списка можно отменить оформление по
+          умолчанию&lt;/li&gt;<br />
+          &lt;li&gt;У списка можно отменить оформление по
+          умолчанию&lt;/li&gt;<br />
+          &lt;/ul&gt;
+        </p>
+      </div>
 
-    <button class="accordion">task 4</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Приоритет 4-го ранга минимальный (но он выше селектора без ранга). 4-й
-        ранг принадлежит селекторам элемента и псевдоэлемента (что это - узнаем
-        позднее).
-      </p>
-      <p class="warning">
-        Селектор тега использовать нежелательно. Подходящим случаем для выбора
-        тега в качестве селектора является необходимость отмены или обнуления
-        стилей внутри документа.
-      </p>
-      <h4>Задание</h4>
-      <p>
-        Для тега li отмени свойство list-style с помощью значения none. Задай
-        свойству color значение green; Убедись на примере изменения цвета
-        текста, что у тега более высокий приоритет, чем у *.
-      </p>
-      <p>
-        &lt;ol&gt; <br />
-        &lt;li&gt;У списка можно отменить оформление по умолчанию&lt;/li&gt;
-        <br />
-        &lt;li&gt;У списка можно отменить оформление по умолчанию&lt;/li&gt;
-        <br />
-        &lt;/ol&gt; <br />&lt;ul&gt;<br />
-        &lt;li&gt;У списка можно отменить оформление по умолчанию&lt;/li&gt;<br />
-        &lt;li&gt;У списка можно отменить оформление по умолчанию&lt;/li&gt;<br />
-        &lt;/ul&gt;
-      </p>
-    </div>
+      <button class="accordion">task 5</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Приоритет 3-го ранга выше приоритета 4-го ранга. 3-й ранг принадлежит
+          селекторам класса и псевдокласса (что это - узнаем позднее).
+        </p>
 
-    <button class="accordion">task 5</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Приоритет 3-го ранга выше приоритета 4-го ранга. 3-й ранг принадлежит
-        селекторам класса и псевдокласса (что это - узнаем позднее).
-      </p>
+        <h4>Задание</h4>
+        <p>
+          Для класса rule задай свойство list-style и значение upper-roman,
+          свойство color и значение navy; Убедись на примере появления римской
+          нумерации и изменения цвета текста, что у класса более высокий
+          приоритет, чем у тега.
+        </p>
+        <p>
+          &lt;ol class=&quot;rules&quot;&gt; <br />
+          &lt;li class=&quot;rule&quot;&gt;Класс - основной селектор для
+          оформления стилей&lt;/li&gt; <br />&lt;li class=&quot;rule&quot;&gt;У
+          класса более высокий приоритет, чем у тега&lt;/li&gt; <br />&lt;li
+          class=&quot;rule&quot;&gt;Избегай по возможности сложных селекторов,
+          например сочетания тега и класса&lt;/li&gt;<br />&lt;li
+          class=&quot;rule&quot;&gt;Лучший селектор - это один класс. Но это не
+          всегда возможно.&lt;/li&gt;<br />
+          &lt;/ol&gt;
+        </p>
+      </div>
 
-      <h4>Задание</h4>
-      <p>
-        Для класса rule задай свойство list-style и значение upper-roman,
-        свойство color и значение navy; Убедись на примере появления римской
-        нумерации и изменения цвета текста, что у класса более высокий
-        приоритет, чем у тега.
-      </p>
-      <p>
-        &lt;ol class=&quot;rules&quot;&gt; <br />
-        &lt;li class=&quot;rule&quot;&gt;Класс - основной селектор для
-        оформления стилей&lt;/li&gt; <br />&lt;li class=&quot;rule&quot;&gt;У
-        класса более высокий приоритет, чем у тега&lt;/li&gt; <br />&lt;li
-        class=&quot;rule&quot;&gt;Избегай по возможности сложных селекторов,
-        например сочетания тега и класса&lt;/li&gt;<br />&lt;li
-        class=&quot;rule&quot;&gt;Лучший селектор - это один класс. Но это не
-        всегда возможно.&lt;/li&gt;<br />
-        &lt;/ol&gt;
-      </p>
-    </div>
+      <button class="accordion">task 6</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Если у элементов есть общие и уникальные правила, то лучшей практикой
+          является создавать для общих правил один отдельный класс и несколько
+          классов для уникальных правил. Подход объединения общего и отделение
+          уникального позволяет избегать повторения кода, что в компьютерных
+          науках называют принципом DRY (don't repeat yourself) - не повторяй
+          свой код. Это один из самых важных принципов для написания простого,
+          понятного и легко поддерживаемого кода, с минимальным количеством
+          ошибок. Его можно применять не только к CSS и классам, но и в
+          большинстве языков программирования, например в JavaScript.
+        </p>
 
-    <button class="accordion">task 6</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Если у элементов есть общие и уникальные правила, то лучшей практикой
-        является создавать для общих правил один отдельный класс и несколько
-        классов для уникальных правил. Подход объединения общего и отделение
-        уникального позволяет избегать повторения кода, что в компьютерных
-        науках называют принципом DRY (don't repeat yourself) - не повторяй свой
-        код. Это один из самых важных принципов для написания простого,
-        понятного и легко поддерживаемого кода, с минимальным количеством
-        ошибок. Его можно применять не только к CSS и классам, но и в
-        большинстве языков программирования, например в JavaScript.
-      </p>
+        <h4>Задание</h4>
 
-      <h4>Задание</h4>
+        <ul>
+          <li>
+            <p>
+              Двум элементам с классом common-rule добавлены классы first-rule и
+              last-rule, т.е. создана композиция с классом common-rule.
+            </p>
+          </li>
+          <li>
+            <p>
+              Добавьте CSS правила для класса first-rule и last-rule под текстом
+              с правилом для класса common-rule (почему именно такое
+              расположение будет рассмотрено позже).
+            </p>
+          </li>
+          <li>
+            <p>Для класса first-rule добавьте свойство color и значение red.</p>
+          </li>
+          <li>
+            <p>
+              Для класса last-rule добавьте свойство color и значение green.
+            </p>
+          </li>
+        </ul>
 
-      <ul>
-        <li>
-          <p>
-            Двум элементам с классом common-rule добавлены классы first-rule и
-            last-rule, т.е. создана композиция с классом common-rule.
-          </p>
-        </li>
-        <li>
-          <p>
-            Добавьте CSS правила для класса first-rule и last-rule под текстом с
-            правилом для класса common-rule (почему именно такое расположение
-            будет рассмотрено позже).
-          </p>
-        </li>
-        <li>
-          <p>Для класса first-rule добавьте свойство color и значение red.</p>
-        </li>
-        <li>
-          <p>Для класса last-rule добавьте свойство color и значение green.</p>
-        </li>
-      </ul>
+        <p>
+          &lt;ol class=&quot;rules&quot;&gt; <br />
+          &lt;li class=&quot;common-rule first-rule&quot;&gt;Класс - основной
+          селектор для оформления стилей&lt;/li&gt; <br />
+          &lt;li class=&quot;common-rule &quot;&gt;У класса более высокий
+          приоритет, чем у тега&lt;/li&gt; <br />
+          &lt;li class=&quot;common-rule&quot;&gt;Избегай по возможности сложных
+          селекторов, например сочетания тега и класса&lt;/li&gt; <br />
+          &lt;li class=&quot;common-rule last-rule&quot;&gt;Лучший селектор -
+          это один класс. Но это не всегда возможно.&lt;/li&gt; <br />
+          &lt;/ol&gt;
+        </p>
+      </div>
 
-      <p>
-        &lt;ol class=&quot;rules&quot;&gt; <br />
-        &lt;li class=&quot;common-rule first-rule&quot;&gt;Класс - основной
-        селектор для оформления стилей&lt;/li&gt; <br />
-        &lt;li class=&quot;common-rule &quot;&gt;У класса более высокий
-        приоритет, чем у тега&lt;/li&gt; <br />
-        &lt;li class=&quot;common-rule&quot;&gt;Избегай по возможности сложных
-        селекторов, например сочетания тега и класса&lt;/li&gt; <br />
-        &lt;li class=&quot;common-rule last-rule&quot;&gt;Лучший селектор - это
-        один класс. Но это не всегда возможно.&lt;/li&gt; <br />
-        &lt;/ol&gt;
-      </p>
-    </div>
-
-    <button class="accordion">task 7</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Если селектор должен выбрать элемент в котором находятся одновременно
-        два класса, то такой селектор выглядит как запись двух классов подряд
-        без пробела. "Вес" такого селектора будет выше, чем у селекторов с одним
-        классом. Чем больше селекторов одного ранга, тем выше специфичность
-        ("вес селектора"). Из нескольких правил css применится то правило, у
-        которого специфичность выше.
-        <br />
-        <br />
-        <b>Полезно</b> <br />
-        Чем выше специфичность (или "вес") селектора, тем труднее изменить
-        правило при необходимости. Рост размера селекторов приводит к трудностям
-        в поддержке из-за лишней сложности. Поэтому нужно стремиться к заданию
-        минимальной специфичности в виде селектора из одного класса, насколько
-        это возможно.
-      </p>
-      <h4>Задание</h4>
-      <p>В CSS добавь класс active к селекторам button и link так, чтобы</p>
-      <ul>
-        <li>
-          правило color: red применилось только к элементу button, содержащему
-          одновременно класс btn и active;
-        </li>
-        <li>
-          правило font-weight: 700 применилось только к элементу a, содержащему
-          одновременно класс link и active.
-        </li>
-      </ul>
-      &lt;button class=&quot;btn&quot;
-      type=&quot;button&quot;&gt;Да&lt;/button&gt; <br />
-      &lt;button class=&quot;btn active&quot;
-      type=&quot;button&quot;&gt;Нет&lt;/button&gt; <br />&lt;a
-      class=&quot;link&quot; href=&quot;#&quot;&gt;Ссылка 1&lt;/a&gt;<br />
-      &lt;a class=&quot;link active&quot; href=&quot;#&quot;&gt;Ссылка
-      2&lt;/a&gt;
-    </div>
-
-    <button class="accordion">task 8</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Если требуется перечислить два разных селектора для одного набора CSS
-        правил, то используют запятую: <br />
-        &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;ссылка&lt;/a&gt;<br />
+      <button class="accordion">task 7</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Если селектор должен выбрать элемент в котором находятся одновременно
+          два класса, то такой селектор выглядит как запись двух классов подряд
+          без пробела. "Вес" такого селектора будет выше, чем у селекторов с
+          одним классом. Чем больше селекторов одного ранга, тем выше
+          специфичность ("вес селектора"). Из нескольких правил css применится
+          то правило, у которого специфичность выше.
+          <br />
+          <br />
+          <b>Полезно</b> <br />
+          Чем выше специфичность (или "вес") селектора, тем труднее изменить
+          правило при необходимости. Рост размера селекторов приводит к
+          трудностям в поддержке из-за лишней сложности. Поэтому нужно
+          стремиться к заданию минимальной специфичности в виде селектора из
+          одного класса, насколько это возможно.
+        </p>
+        <h4>Задание</h4>
+        <p>В CSS добавь класс active к селекторам button и link так, чтобы</p>
+        <ul>
+          <li>
+            правило color: red применилось только к элементу button, содержащему
+            одновременно класс btn и active;
+          </li>
+          <li>
+            правило font-weight: 700 применилось только к элементу a,
+            содержащему одновременно класс link и active.
+          </li>
+        </ul>
         &lt;button class=&quot;btn&quot;
-        type=&quot;button&quot;&gt;да&lt;/button&gt; <br />
-        <br />
-        .link, <br />
-        .btn { <br />
-        color: red; <br />
-        }
-        <br />
-        <br />
-        Класс и псевдокласс имеют одинаковую специфичность. Но так, как
-        псевдокласс, как правило, добавляют к классу, то общий "вес" такого
-        селектора будет выше (3-й ранг + 3-й ранг = 2 * 3-й ранг), чем у
-        селекторов с одним классом (1 * 3-й ранг).
-      </p>
-      <h4>Задание</h4>
-      <p>
-        Добавь псевдокласс :hover и :focus так, чтобы для класса link
-        применялось свойство opacity: 1 при наведении курсора или получения
-        фокуса с помощью клавиши tab
-      </p>
-      &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;Ссылка 1&lt;/a&gt;
-      <br />
-      &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;Ссылка 2&lt;/a&gt;
-    </div>
+        type=&quot;button&quot;&gt;Да&lt;/button&gt; <br />
+        &lt;button class=&quot;btn active&quot;
+        type=&quot;button&quot;&gt;Нет&lt;/button&gt; <br />&lt;a
+        class=&quot;link&quot; href=&quot;#&quot;&gt;Ссылка 1&lt;/a&gt;<br />
+        &lt;a class=&quot;link active&quot; href=&quot;#&quot;&gt;Ссылка
+        2&lt;/a&gt;
+      </div>
 
-    <button class="accordion">task 9</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Класс и атрибут имеют равный "вес" селектора. В CSS при одинаковой
-        специфичности (равном "весе" селекторов) применятся то правило, которое
-        будет написано ниже в тексте (выполнится позже в потоке выполнения
-        документа). Селектор атрибута должен находиться внутри квадратных скобок
-        и может содержать название атрибута или название и значение атрибута.
+      <button class="accordion">task 8</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Если требуется перечислить два разных селектора для одного набора CSS
+          правил, то используют запятую: <br />
+          &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;ссылка&lt;/a&gt;<br />
+          &lt;button class=&quot;btn&quot;
+          type=&quot;button&quot;&gt;да&lt;/button&gt; <br />
+          <br />
+          .link, <br />
+          .btn { <br />
+          color: red; <br />
+          }
+          <br />
+          <br />
+          Класс и псевдокласс имеют одинаковую специфичность. Но так, как
+          псевдокласс, как правило, добавляют к классу, то общий "вес" такого
+          селектора будет выше (3-й ранг + 3-й ранг = 2 * 3-й ранг), чем у
+          селекторов с одним классом (1 * 3-й ранг).
+        </p>
+        <h4>Задание</h4>
+        <p>
+          Добавь псевдокласс :hover и :focus так, чтобы для класса link
+          применялось свойство opacity: 1 при наведении курсора или получения
+          фокуса с помощью клавиши tab
+        </p>
+        &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;Ссылка 1&lt;/a&gt;
         <br />
-        <br />
-        <b>ПРИМЕР</b>
-        <br />
-        <br />
-        &lt;a href=&quot;#&quot;&gt;ссылка&lt;/a&gt; <br />
-        &lt;img src=&quot;img.jpg&quot;&gt;
+        &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;Ссылка 2&lt;/a&gt;
+      </div>
+
+      <button class="accordion">task 9</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Класс и атрибут имеют равный "вес" селектора. В CSS при одинаковой
+          специфичности (равном "весе" селекторов) применятся то правило,
+          которое будет написано ниже в тексте (выполнится позже в потоке
+          выполнения документа). Селектор атрибута должен находиться внутри
+          квадратных скобок и может содержать название атрибута или название и
+          значение атрибута.
+          <br />
+          <br />
+          <b>ПРИМЕР</b>
+          <br />
+          <br />
+          &lt;a href=&quot;#&quot;&gt;ссылка&lt;/a&gt; <br />
+          &lt;img src=&quot;img.jpg&quot;&gt;
+
+          <br />
+          <br />
+
+          [src] { <br />
+          display: block; <br />
+          width: 100%; <br />
+          } <br />
+          [href=&quot;#&quot;] {
+          <br />
+          color: red; <br />
+          }
+          <br />
+          <br />
+          Для повышения специфичности можно записывать составной селектор,
+          состоящий из класса и атрибута.
+          <br />
+          <br />
+          <b>ПРИМЕР</b>
+          <br />
+          <br />
+          &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;ссылка&lt;/a&gt;
+          <br />
+          <br />
+          .link[href=&quot;#&quot;] { <br />
+          color: red; <br />
+          }
+        </p>
+        <h4>Задание</h4>
+        <ul>
+          <li>
+            Для селектора в виде атрибута [type] задай свойство color со
+            значением white.
+          </li>
+          <li>
+            Повышаем специфичность. Для селектора в виде тега button и атрибута
+            [type="reset"] задай свойство color со значением green
+          </li>
+        </ul>
+        &lt;button class=&quot;btn&quot;
+        type=&quot;button&quot;&gt;продолжить&lt;/button&gt; <br />
+        &lt;button class=&quot;btn&quot; type=&quot;reset&quot;&gt;по
+        умолчанию&lt;/button&gt; <br />
+        &lt;button class=&quot;btn&quot;
+        type=&quot;submit&quot;&gt;отправить&lt;/button&gt; <br />
+        &lt;a class=&quot;btn&quot;
+        href=&quot;./help.html&quot;&gt;помощь&lt;/a&gt;
+      </div>
+
+      <button class="accordion">task 10</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Символ ^ для выбора тех значений атрибута, которые начинаются с
+          определенных символов Если требуется выделить атрибут, значение
+          которого начинается с какого-то символа, то синтаксис такого селектора
+          содержит ^ перед знаком равно и текст, с которого начинается значение
+          атрибута Селектор атрибута должен находиться внутри квадратных скобок.
+          <br />
+          <br />
+          <b>ПРИМЕР</b>
+          <br />
+          <br />
+          &lt;a class=&quot;link&quot; href=&quot;./index.html&quot;&gt;На
+          главную страницу&lt;/a&gt; <br />
+          &lt;a class=&quot;link&quot; href=&quot;#ancor&quot;&gt;ссылка на
+          элемент страницы с заданным id&lt;/a&gt; <br />
+          &lt;section id=&quot;ancor&quot;&gt;...&lt;/section&gt;
+          <br />
+          <br />
+          /* &quot;#ancor&quot; начинается с &quot;#&quot; */ <br />
+          [href^=&quot;#&quot;] { <br />
+          color: red; <br />
+          }
+        </p>
+
+        <h4>Задание</h4>
+        <ul>
+          <li>
+            Для ссылок с атрибутом href, значение которых начинается с ./ задай
+            цвет текста red.
+          </li>
+          <li>
+            Для ссылок с атрибутом href, значение которых начинается с https
+            задай цвет текста navy.
+          </li>
+          <li>Специфичность селекторов должна быть минимальной.</li>
+        </ul>
 
         <br />
         <br />
+        &lt;ul&gt;<br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot; href=&quot;./index.html&quot;&gt;На
+        главную&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li&gt; <br />
+        &lt;a class=&quot;link&quot; href=&quot;./about.html&quot;&gt;О
+        нас&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot;
+        href=&quot;./contats.html&quot;&gt;Контакты&lt;/a&gt; &lt;/li&gt;<br />
+        &lt;/ul&gt;<br />
+        &lt;ul&gt; <br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot; target=&quot;_blank&quot;
+        href=&quot;https://www.google.com&quot;&gt;Google&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li&gt; &lt;a class=&quot;link&quot; target=&quot;_blank&quot;
+        href=&quot;https://developer.mozilla.org/ru/docs/web/css&quot;&gt;MDN +
+        CSS&lt;/a&gt; <br />&lt;/li&gt;<br />
+        &lt;li&gt; &lt;a class=&quot;link&quot; target=&quot;_blank&quot;
+        href=&quot;https://stackoverflow.com/questions/tagged/css&quot;&gt;StackOverflow
+        + CSS&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;/ul&gt;
+      </div>
 
-        [src] { <br />
-        display: block; <br />
-        width: 100%; <br />
-        } <br />
-        [href=&quot;#&quot;] {
-        <br />
-        color: red; <br />
-        }
-        <br />
-        <br />
-        Для повышения специфичности можно записывать составной селектор,
-        состоящий из класса и атрибута.
-        <br />
-        <br />
-        <b>ПРИМЕР</b>
-        <br />
-        <br />
-        &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;ссылка&lt;/a&gt;
-        <br />
-        <br />
-        .link[href=&quot;#&quot;] { <br />
-        color: red; <br />
-        }
-      </p>
-      <h4>Задание</h4>
-      <ul>
-        <li>
-          Для селектора в виде атрибута [type] задай свойство color со значением
-          white.
-        </li>
-        <li>
-          Повышаем специфичность. Для селектора в виде тега button и атрибута
-          [type="reset"] задай свойство color со значением green
-        </li>
-      </ul>
-      &lt;button class=&quot;btn&quot;
-      type=&quot;button&quot;&gt;продолжить&lt;/button&gt; <br />
-      &lt;button class=&quot;btn&quot; type=&quot;reset&quot;&gt;по
-      умолчанию&lt;/button&gt; <br />
-      &lt;button class=&quot;btn&quot;
-      type=&quot;submit&quot;&gt;отправить&lt;/button&gt; <br />
-      &lt;a class=&quot;btn&quot;
-      href=&quot;./help.html&quot;&gt;помощь&lt;/a&gt;
-    </div>
+      <button class="accordion">task 11</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Символ $ для выбора тех значений атрибута, которые заканчиваются на
+          определенные символы. Если требуется выделить атрибут, значение
+          которого в конце имеет определенный символ (или символы), то синтаксис
+          такого селектора содержит
+        </p>
+        <ul>
+          <li>$ перед знаком равно</li>
+          <li>и текст, который ожидается в конце значения.</li>
+        </ul>
+        <p>Селектор атрибута должен находиться внутри квадратных скобок.</p>
 
-    <button class="accordion">task 10</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Символ ^ для выбора тех значений атрибута, которые начинаются с
-        определенных символов Если требуется выделить атрибут, значение которого
-        начинается с какого-то символа, то синтаксис такого селектора содержит ^
-        перед знаком равно и текст, с которого начинается значение атрибута
-        Селектор атрибута должен находиться внутри квадратных скобок.
-        <br />
-        <br />
         <b>ПРИМЕР</b>
         <br />
         <br />
         &lt;a class=&quot;link&quot; href=&quot;./index.html&quot;&gt;На главную
         страницу&lt;/a&gt; <br />
         &lt;a class=&quot;link&quot; href=&quot;#ancor&quot;&gt;ссылка на
-        элемент страницы с заданным id&lt;/a&gt; <br />
-        &lt;section id=&quot;ancor&quot;&gt;...&lt;/section&gt;
+        элемент страницы с заданным id&lt;/a&gt; <br />&lt;section
+        id=&quot;ancor&quot;&gt;...&lt;/section&gt;
+
         <br />
         <br />
-        /* &quot;#ancor&quot; начинается с &quot;#&quot; */ <br />
-        [href^=&quot;#&quot;] { <br />
+        /* &quot;#ancor&quot; заканчивается на &quot;cor&quot; */ <br />
+        [href$=&quot;cor&quot;] { <br />
         color: red; <br />
         }
-      </p>
+        <h4>Задание</h4>
+        <ul>
+          <li>
+            Для атрибутов, заканчивающихся на html задай цвет текста green
+          </li>
+          <li>
+            Для атрибутов, заканчивающихся на css задай цвет текста orangered.
+          </li>
+          <li>Специфичность селекторов должна быть минимальной.</li>
+        </ul>
+        &lt;ul&gt; <br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot; href=&quot;./index.html&quot;&gt;На
+        главную&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot; href=&quot;./about.html&quot;&gt;О
+        нас&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot;
+        href=&quot;./contats.html&quot;&gt;Контакты&lt;/a&gt;
+        <br />&lt;/li&gt;<br />
+        &lt;/ul&gt;<br />
+        &lt;ul&gt;<br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot;
+        href=&quot;https://www.google.com&quot;&gt;Google&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot;
+        href=&quot;https://developer.mozilla.org/ru/docs/web/css&quot;&gt;MDN +
+        CSS&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot;
+        href=&quot;https://stackoverflow.com/questions/tagged/css&quot;&gt;StackOverflow
+        + CSS&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;/ul&gt;
+      </div>
 
-      <h4>Задание</h4>
-      <ul>
-        <li>
-          Для ссылок с атрибутом href, значение которых начинается с ./ задай
-          цвет текста red.
-        </li>
-        <li>
-          Для ссылок с атрибутом href, значение которых начинается с https задай
-          цвет текста navy.
-        </li>
-        <li>Специфичность селекторов должна быть минимальной.</li>
-      </ul>
+      <button class="accordion">task 12</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Символ * для выбора тех значений атрибута, которые включают
+          определенные символы Если требуется выделить атрибут, в значении
+          которого включен какой-то текст, то синтаксис такого селектора
+          содержит * перед знаком равно и сам текст. Селектор атрибута должен
+          находиться внутри квадратных скобок.
+          <br />
+          <br />
+          <b>ПРИМЕР</b>
+          <br />
+          <br />
+          &lt;a class=&quot;link&quot; href=&quot;./index.html&quot;&gt;На
+          главную страницу&lt;/a&gt; <br />
+          &lt;a class=&quot;link&quot; href=&quot;#introduction&quot;&gt;ссылка
+          на элемент страницы с заданным id&lt;/a&gt; <br />&lt;a
+          class=&quot;link&quot; href=&quot;#article&quot;&gt;ссылка на элемент
+          страницы с заданным id&lt;/a&gt;<br />
+          &lt;section id=&quot;introduction&quot;&gt;...&lt;/section&gt;<br />
+          &lt;section id=&quot;article&quot;&gt;...&lt;/section&gt;
+          <br />
+          <br />
+          /* &quot;in&quot; содержится в &quot;./index.html&quot; и в
+          &quot;#introduction&quot;, но не в &quot;#article&quot; */ <br />
+          [href*=&quot;in&quot;] { <br />
+          color: red; <br />
+          }
+        </p>
+        <h4>Задание</h4>
+        <ul>
+          <li>Для атрибутов, содержащих about задай цвет текста green.</li>
+          <li>Для атрибутов, содержащих com задай цвет текста orangered.</li>
+          <li>Специфичность селекторов должна быть минимальной.</li>
+        </ul>
+        &lt;ul&gt;<br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot; href=&quot;./index.html&quot;&gt;На
+        главную&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot; href=&quot;./about-book.html&quot;&gt;О
+        книге&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot; href=&quot;./about-author.html&quot;&gt;Об
+        авторе&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;/ul&gt;<br />
+        &lt;ul&gt;<br />
+        &lt;li&gt; <br />&lt;a class=&quot;link&quot;
+        href=&quot;https://www.google.com/&quot;&gt;Google&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot;
+        href=&quot;https://developer.mozilla.org/ru/docs/web/css&quot;&gt;MDN +
+        CSS&lt;/a&gt; <br />&lt;/li&gt;<br />
+        &lt;li&gt;<br />
+        &lt;a class=&quot;link&quot;
+        href=&quot;https://stackoverflow.com/questions/tagged/css&quot;&gt;StackOverflow
+        + CSS&lt;/a&gt; <br />&lt;/li&gt;<br />
+        &lt;/ul&gt;
+      </div>
 
-      <br />
-      <br />
-      &lt;ul&gt;<br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot; href=&quot;./index.html&quot;&gt;На
-      главную&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li&gt; <br />
-      &lt;a class=&quot;link&quot; href=&quot;./about.html&quot;&gt;О
-      нас&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot;
-      href=&quot;./contats.html&quot;&gt;Контакты&lt;/a&gt; &lt;/li&gt;<br />
-      &lt;/ul&gt;<br />
-      &lt;ul&gt; <br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot; target=&quot;_blank&quot;
-      href=&quot;https://www.google.com&quot;&gt;Google&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li&gt; &lt;a class=&quot;link&quot; target=&quot;_blank&quot;
-      href=&quot;https://developer.mozilla.org/ru/docs/web/css&quot;&gt;MDN +
-      CSS&lt;/a&gt; <br />&lt;/li&gt;<br />
-      &lt;li&gt; &lt;a class=&quot;link&quot; target=&quot;_blank&quot;
-      href=&quot;https://stackoverflow.com/questions/tagged/css&quot;&gt;StackOverflow
-      + CSS&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;/ul&gt;
-    </div>
+      <button class="accordion">task 13</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Приоритет 2-го ранга выше приоритета 3-го ранга. Такой селектор
+          нежелательно использовать для создания CSS правил из-за того что стили
+          задаются классами, т.е. селекторами 3-го ранга, а 2-й ранг
+          переопределит стили без возможности изменить любым количеством
+          селекторов 3-го ранга (т.е. даже композиция из 64 тысяч классов не
+          изменит значения у id селектора ). id активно применяются в html
+          формах, в JS и т.п., но использование селектора id в css правилах
+          является плохой практикой из-за более высокого приоритета этого
+          селектора по сравнению с классом.
+        </p>
+        <h4>Задание</h4>
+        <p>
+          Добавь CSS правило с id селектором sending со свойством
+          background-color и значением teal, со свойством color и значением
+          white. Обрати внимание на то что у id более высокий приоритет, чем у
+          класса.
+        </p>
+        &lt;div class=&quot;warning&quot;
+        id=&quot;sending&quot;&gt;Использование id в качестве селектора в
+        большинстве случаев является плохой практикой. Потому что приводят к
+        дублированию кода и, как следствие, к излишней сложности
+        кода.&lt;/div&gt;
+      </div>
 
-    <button class="accordion">task 11</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Символ $ для выбора тех значений атрибута, которые заканчиваются на
-        определенные символы. Если требуется выделить атрибут, значение которого
-        в конце имеет определенный символ (или символы), то синтаксис такого
-        селектора содержит
-      </p>
-      <ul>
-        <li>$ перед знаком равно</li>
-        <li>и текст, который ожидается в конце значения.</li>
-      </ul>
-      <p>Селектор атрибута должен находиться внутри квадратных скобок.</p>
+      <button class="accordion">task 14</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Приоритет 1-го ранга выше приоритета 2-го ранга. 1-й ранг принадлежит
+          селекторам атрибута style внутри html элемента. Обратите внимание что
+          атрибут class имеет 3-й ранг, а атрибут id - 2-й ранг.
+          <br />
+          <br />
+          Атрибут style как правило используется в JavaScript, наравне с
+          использованием стилей через добавлением или удалением классов.
+        </p>
+        <p class="warning">
+          Предпочтительно стили задавать через классы, т.к. это упрощает
+          разработку и поддержку веб-приложения.
+        </p>
+        <h4>Задание</h4>
+        <p>
+          Задайте элементу div инлайн стили CSS со свойством background-color и
+          значением orange, со свойством color и значением navy.
+          <br />
+          <br />
+          Обратите внимание на более высокий приоритет у инлайн-стилей по
+          сравнению с классом и id.
+        </p>
+        &lt;div class=&quot;warning&quot; id=&quot;inline&quot;
+        style=&quot;background-color:orange;color:navy&quot;&gt;
+        <br />Инлайн стили нежелательно использовать из-за более высокого
+        приоритета чем у id, а также из-за сложности c поддержкой и повторным
+        использованием кода. <br />
+        &lt;/div&gt;
+      </div>
 
-      <b>ПРИМЕР</b>
-      <br />
-      <br />
-      &lt;a class=&quot;link&quot; href=&quot;./index.html&quot;&gt;На главную
-      страницу&lt;/a&gt; <br />
-      &lt;a class=&quot;link&quot; href=&quot;#ancor&quot;&gt;ссылка на элемент
-      страницы с заданным id&lt;/a&gt; <br />&lt;section
-      id=&quot;ancor&quot;&gt;...&lt;/section&gt;
-
-      <br />
-      <br />
-      /* &quot;#ancor&quot; заканчивается на &quot;cor&quot; */ <br />
-      [href$=&quot;cor&quot;] { <br />
-      color: red; <br />
-      }
-      <h4>Задание</h4>
-      <ul>
-        <li>Для атрибутов, заканчивающихся на html задай цвет текста green</li>
-        <li>
-          Для атрибутов, заканчивающихся на css задай цвет текста orangered.
-        </li>
-        <li>Специфичность селекторов должна быть минимальной.</li>
-      </ul>
-      &lt;ul&gt; <br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot; href=&quot;./index.html&quot;&gt;На
-      главную&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot; href=&quot;./about.html&quot;&gt;О
-      нас&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot;
-      href=&quot;./contats.html&quot;&gt;Контакты&lt;/a&gt;
-      <br />&lt;/li&gt;<br />
-      &lt;/ul&gt;<br />
-      &lt;ul&gt;<br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot;
-      href=&quot;https://www.google.com&quot;&gt;Google&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot;
-      href=&quot;https://developer.mozilla.org/ru/docs/web/css&quot;&gt;MDN +
-      CSS&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot;
-      href=&quot;https://stackoverflow.com/questions/tagged/css&quot;&gt;StackOverflow
-      + CSS&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;/ul&gt;
-    </div>
-
-    <button class="accordion">task 12</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Символ * для выбора тех значений атрибута, которые включают определенные
-        символы Если требуется выделить атрибут, в значении которого включен
-        какой-то текст, то синтаксис такого селектора содержит * перед знаком
-        равно и сам текст. Селектор атрибута должен находиться внутри квадратных
-        скобок.
+      <button class="accordion">task 15</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Значение !important добавляется после значения css свойства через
+          пробел.
+        </p>
+        <p class="warning">
+          Использование этого способа изменить приоритет является плохим тоном и
+          не рекомендуется к применению. В данном задании мы знакомим с этим
+          приемом для понимания самого механизма изменения приоритета.
+        </p>
         <br />
         <br />
         <b>ПРИМЕР</b>
         <br />
         <br />
-        &lt;a class=&quot;link&quot; href=&quot;./index.html&quot;&gt;На главную
-        страницу&lt;/a&gt; <br />
-        &lt;a class=&quot;link&quot; href=&quot;#introduction&quot;&gt;ссылка на
-        элемент страницы с заданным id&lt;/a&gt; <br />&lt;a
-        class=&quot;link&quot; href=&quot;#article&quot;&gt;ссылка на элемент
-        страницы с заданным id&lt;/a&gt;<br />
-        &lt;section id=&quot;introduction&quot;&gt;...&lt;/section&gt;<br />
-        &lt;section id=&quot;article&quot;&gt;...&lt;/section&gt;
+        <p>
+          a { <br />
+          color: red !important; <br />
+          }
+          <br />
+          <br />
+          &lt;div style=&quot;color: navy !important;&quot;&gt; <br />
+          Это css свойство невозможно ничем переопределить, т.к. сочетание
+          инлайн и `!important` создают высший приоритет. Не используйте такой
+          способ!
+          <br />
+          &lt;/div&gt;
+
+          <br />
+          <br />
+          Расчет приоритета при применении значения !important происходит так,
+          словно рангу селектора добавилось еще 4-ре ранга с более высоким
+          приоритетом. Что-то вроде добавления приставки 0.
+        </p>
+        <h4>Задание</h4>
+        <p>
+          Добавь !important обеим значениям свойств селектора div. Обрати
+          внимание на то что у div приоритет изменился и стал более высоким чем
+          у инлайн.
+        </p>
+        &lt;div class=&quot;warning&quot; id=&quot;inline&quot;
+        style=&quot;background-color: orange; color: navy;&quot;&gt;
+        <br />Использование !important крайне нежелательно. Этот способ повысить
+        приоритет до неизменяемого применяют обычно только для оформления
+        предупреждений или сообщений об ошибках приложения. <br />&lt;/div&gt;
+      </div>
+
+      <button class="accordion">task 16</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>Прямой потомок элемента в селекторе задается с помощью символа ></p>
+        <b>ПРИМЕР</b>
         <br />
         <br />
-        /* &quot;in&quot; содержится в &quot;./index.html&quot; и в
-        &quot;#introduction&quot;, но не в &quot;#article&quot; */ <br />
-        [href*=&quot;in&quot;] { <br />
+        &lt;section&gt; <br />
+        &lt;div&gt; <br />
+        &lt;h4&gt;Заголовок&lt;/h4&gt; <br />
+        &lt;/div&gt; <br />
+        &lt;/section&gt;
+        <br />
+        <br />
+        section &gt; div {} <br />
+        div &gt; h4 {}
+
+        <h4>Задание</h4>
+        <p>
+          Добавь к селектору menu-item еще один класс menu так, чтобы оба
+          свойства display и vertical-align применились только к прямым потомкам
+          класса menu, но не к потомкам sub-menu.
+        </p>
+        &lt;ul class=&quot;menu&quot;&gt; <br />
+        &lt;li class=&quot;menu-item&quot;&gt; <br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Меню 1&lt;/a&gt;
+        <br />
+        &lt;/li&gt; <br />
+        &lt;li class=&quot;menu-item&quot;&gt; <br />
+        &lt;ul class=&quot;sub-menu&quot;&gt; <br />
+        &lt;li class=&quot;menu-item&quot;&gt; <br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
+        1&lt;/a&gt; <br />
+        &lt;/li&gt; <br />
+        &lt;li class=&quot;menu-item&quot;&gt; <br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
+        2&lt;/a&gt;
+        <br />
+        &lt;/li&gt; <br />&lt;li class=&quot;menu-item&quot;&gt;<br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
+        3&lt;/a&gt;
+        <br />
+        &lt;/li&gt; <br />
+        &lt;/ul&gt; <br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Меню 2&lt;/a&gt;
+        <br />&lt;/li&gt; <br />
+        &lt;li class=&quot;menu-item&quot;&gt; <br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Меню 3&lt;/a&gt;
+        <br />
+        &lt;/li&gt; <br />
+        &lt;/ul&gt;
+      </div>
+
+      <button class="accordion">task 17</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+
+        <p>
+          Любой потомок элемента в селекторе задается с помощью пробела между
+          селектором элемента и его потомками любого уровня вложенности. Первый
+          потомок элемента задается символом > между селектором элемента и
+          селектором потомка.
+        </p>
+        <br />
+        <br />
+        <b>ПРИМЕР</b>
+        <br />
+        <br />
+        &lt;section&gt; <br />
+        &lt;div class=&quot;first&quot;&gt; <br />
+        &lt;h4&gt;Заголовок&lt;/h4&gt;<br />
+        &lt;div&gt; Непрямой потомок section&lt;/div&gt; <br />
+        &lt;/div&gt; <br />
+        &lt;div class=&quot;first&quot;&gt;1&lt;/div&gt; <br />
+        &lt;/section&gt;
+        <p>Любой потомок для элемента section это все div и h4:</p>
+        section div {} <br />
+        section h4 {}
+        <p>Первый потомок для элемента section это div с классом first:</p>
+        section &gt; div {}
+        <h4>Задание</h4>
+        <p>
+          В html коде дано меню, которое содержит два подменю, вложенных одно в
+          другое. В css кода все подменю с классом sub-menu скрыты с помощью
+          свойства opacity. Необходимо разместить элементы li списка с классом
+          menu по горизонтали, а li списков с классом sub-menu должны остаться в
+          вертикальном положении. Также при наведении курсором на элемент li
+          должно показываться скрытое меню. Для этого
+        </p>
+        <ol>
+          <li>
+            Добавь к селектору menu все элементы с селектором класса menu-item,
+            которые являются первыми потомками списка с классом menu.
+          </li>
+          <li>
+            Добавь к селектору sub-menu все элементы с селектором класса
+            menu-item, которые являются потомками списка с классом sub-menu на
+            любом уровне вложенности.
+          </li>
+          <li>
+            Добавь к селектору menu-item:hover все элементы, которые являются
+            потомками элемента с классом menu-item на любом уровне вложенности.
+          </li>
+        </ol>
+        <p>
+          Обрати внимание на поведение элементов меню при hover до и после
+          успешного выполнения задания.
+        </p>
+        &lt;ul class=&quot;menu&quot;&gt;<br />
+        &lt;li class=&quot;menu-item&quot;&gt;<br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Меню
+        1&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li class=&quot;menu-item&quot;&gt; <br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Меню 2
+        ▼&lt;/a&gt;
+        <br />
+        &lt;ul class=&quot;sub-menu&quot;&gt;<br />
+        &lt;li class=&quot;menu-item&quot;&gt;<br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
+        1&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li class=&quot;menu-item&quot;&gt;<br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню 2
+        ▼&lt;/a&gt;<br />
+        &lt;ul class=&quot;sub-menu&quot;&gt;<br />
+        &lt;li class=&quot;menu-item&quot;&gt;<br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
+        1&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li class=&quot;menu-item&quot;&gt;<br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
+        2&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li class=&quot;menu-item&quot;&gt;<br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
+        3&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;/ul&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li class=&quot;menu-item&quot;&gt;<br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
+        3&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li class=&quot;menu-item&quot;&gt;<br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
+        4&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;/ul&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;li class=&quot;menu-item&quot;&gt;<br />
+        &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Меню
+        3&lt;/a&gt;<br />
+        &lt;/li&gt;<br />
+        &lt;/ul&gt; <br />
+      </div>
+
+      <button class="accordion">task 18</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Отсчет соседства связан с потоком выполнения - т.е. началом отсчета
+          соседства считается элемент, который написан и прочитан браузером
+          первым. Первый сосед в селекторе задается с помощью символа + Примеры
+          с объяснением какой элемент является первым соседом.
+        </p>
+        <b>ПРИМЕР</b>
+        <br />
+        <br />
+        &lt;section class=&quot;first&quot;&gt; <br />
+        Элемент <br />
+        &lt;/section&gt; <br />
+        &lt;section class=&quot;first-neighbor&quot;&gt;<br />
+        1-й сосед <br />
+        &lt;/section&gt; <br />
+        &lt;section class=&quot;second-neighbor&quot;&gt;<br />
+        2-й сосед <br />
+        &lt;/section&gt; <br />
+        &lt;section class=&quot;third-neighbor&quot;&gt;<br />
+        3-й сосед <br />
+        &lt;/section&gt;
+        <p>
+          Запишем селектор соседства для элемента section с классом first так,
+          чтобы был выбран элемент с классом first-neighbor
+        </p>
+        <br />
+        <br />
+        .first + section {color: red;}
+        <h4>Задание</h4>
+        <p>
+          Добавь к селектору item-1 еще один класс item так, чтобы свойство
+          color: red применилось только к первому соседу - элементу с классом
+          item-2
+        </p>
+        &lt;ul class=&quot;items&quot;&gt;<br />
+        &lt;li class=&quot;item item-1&quot;&gt;1-й сосед&lt;/li&gt;<br />
+        &lt;li class=&quot;item item-2&quot;&gt;2-й сосед&lt;/li&gt;<br />
+        &lt;li class=&quot;item item-3&quot;&gt;3-й сосед&lt;/li&gt;
+        <br />&lt;li class=&quot;item item-4&quot;&gt;4-й сосед&lt;/li&gt;<br />
+        &lt;/ul&gt;
+      </div>
+
+      <button class="accordion">task 19</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Отсчет соседства связан с потоком выполнения - т.е. соседними
+          элементами считаются все элементы, написанные в коде после заданного
+          селектором и имеющие общего прямого родителя. Любой нижний сосед для
+          селектора задается с помощью символа ~ Примеры с объяснением какой
+          элемент является первым соседом.
+        </p>
+        <b>ПРИМЕР</b>
+        <br />
+        <br />
+        &lt;section class=&quot;zero&quot;&gt;сосед сверху&lt;/section&gt;
+        <br />
+        &lt;section class=&quot;first&quot;&gt;Элемент&lt;/section&gt; <br />
+        &lt;section class=&quot;first-neighbor&quot;&gt;1-й
+        сосед&lt;/section&gt;<br />
+        &lt;section class=&quot;second-neighbor&quot;&gt;2-й
+        сосед&lt;/section&gt;<br />
+        &lt;section class=&quot;third-neighbor&quot;&gt;3-й
+        сосед&lt;/section&gt;
+        <p>
+          Запишем селектор соседства для класса first так, чтобы был выбран
+          элемент с классами first-neighbor, second-neighbor и third-neighbor:
+        </p>
+        .first ~ section { <br />
         color: red; <br />
         }
-      </p>
-      <h4>Задание</h4>
-      <ul>
-        <li>Для атрибутов, содержащих about задай цвет текста green.</li>
-        <li>Для атрибутов, содержащих com задай цвет текста orangered.</li>
-        <li>Специфичность селекторов должна быть минимальной.</li>
-      </ul>
-      &lt;ul&gt;<br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot; href=&quot;./index.html&quot;&gt;На
-      главную&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot; href=&quot;./about-book.html&quot;&gt;О
-      книге&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot; href=&quot;./about-author.html&quot;&gt;Об
-      авторе&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;/ul&gt;<br />
-      &lt;ul&gt;<br />
-      &lt;li&gt; <br />&lt;a class=&quot;link&quot;
-      href=&quot;https://www.google.com/&quot;&gt;Google&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot;
-      href=&quot;https://developer.mozilla.org/ru/docs/web/css&quot;&gt;MDN +
-      CSS&lt;/a&gt; <br />&lt;/li&gt;<br />
-      &lt;li&gt;<br />
-      &lt;a class=&quot;link&quot;
-      href=&quot;https://stackoverflow.com/questions/tagged/css&quot;&gt;StackOverflow
-      + CSS&lt;/a&gt; <br />&lt;/li&gt;<br />
-      &lt;/ul&gt;
-    </div>
+        <h4>Задание</h4>
+        <p>
+          Добавь к селектору item-2 еще один класс item так, чтобы свойство
+          color со значением red применилось ко всем нижним соседям этого
+          элемента. Т.е. правило должно примениться к элементам с классом item-3
+          и item-4. Ни к каким другим элементам color: red больше применяться не
+          должно.
+        </p>
+        &lt;ul class=&quot;items&quot;&gt; <br />
+        &lt;li class=&quot;item item-1&quot;&gt;1-й сосед&lt;/li&gt; <br />
+        &lt;li class=&quot;item item-2&quot;&gt;2-й сосед&lt;/li&gt; <br />
+        &lt;li class=&quot;item item-3&quot;&gt;3-й сосед&lt;/li&gt; <br />
+        &lt;li class=&quot;item item-4&quot;&gt;4-й сосед&lt;/li&gt; <br />
+        &lt;/ul&gt;
+      </div>
 
-    <button class="accordion">task 13</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Приоритет 2-го ранга выше приоритета 3-го ранга. Такой селектор
-        нежелательно использовать для создания CSS правил из-за того что стили
-        задаются классами, т.е. селекторами 3-го ранга, а 2-й ранг переопределит
-        стили без возможности изменить любым количеством селекторов 3-го ранга
-        (т.е. даже композиция из 64 тысяч классов не изменит значения у id
-        селектора ). id активно применяются в html формах, в JS и т.п., но
-        использование селектора id в css правилах является плохой практикой
-        из-за более высокого приоритета этого селектора по сравнению с классом.
-      </p>
-      <h4>Задание</h4>
-      <p>
-        Добавь CSS правило с id селектором sending со свойством background-color
-        и значением teal, со свойством color и значением white. Обрати внимание
-        на то что у id более высокий приоритет, чем у класса.
-      </p>
-      &lt;div class=&quot;warning&quot; id=&quot;sending&quot;&gt;Использование
-      id в качестве селектора в большинстве случаев является плохой практикой.
-      Потому что приводят к дублированию кода и, как следствие, к излишней
-      сложности кода.&lt;/div&gt;
-    </div>
+      <button class="accordion">task 20</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Если есть свойство, для которого записано несколько CSS правил с
+          селекторами одинакового "веса", то значения будут перезаписаны и в
+          итоге применится значение из написанного последним CSS правила.
+        </p>
+        <h4>Задание</h4>
+        <p>
+          Не меняя селекторы и правила CSS сделай так, чтобы цвет текста всех
+          элементов стал maroon (перемести CSS правила).
+        </p>
+        &lt;h4 class=&quot;title headline&quot;
+        title=&quot;1&quot;&gt;1&lt;/h4&gt; <br />
+        &lt;h4 class=&quot;title headline&quot;
+        title=&quot;2&quot;&gt;2&lt;/h4&gt; <br />
+        &lt;h4 class=&quot;title headline&quot;
+        title=&quot;3&quot;&gt;3&lt;/h4&gt;
+      </div>
 
-    <button class="accordion">task 14</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Приоритет 1-го ранга выше приоритета 2-го ранга. 1-й ранг принадлежит
-        селекторам атрибута style внутри html элемента. Обратите внимание что
-        атрибут class имеет 3-й ранг, а атрибут id - 2-й ранг.
+      <button class="accordion">task 21</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Некоторые свойства CSS могут передавать значение элементам html,
+          являющимися потомками элемента выделенного селектором. Например цвет
+          текста - наследуется (за некоторыми исключениями, одному из которых
+          посвящено следующее задание ).
+        </p>
+        <h4>Задание</h4>
+        <p>
+          В коде html есть элемент ul с классом cards и есть последний элемент
+          li с классом last-of-type. С помощью наследования нужно изменить цвет
+          текста для элементов-потомков этих двух элементов. Для этого
+          необходимо:
+        </p>
+        <ul>
+          <li>селектору класса cards задать цвет текста navy;</li>
+          <li>селектору класса last-of-type задать цвет текста firebrick.</li>
+        </ul>
+        &lt;ul class=&quot;cards&quot;&gt; <br />
+        &lt;li class=&quot;card&quot;&gt; <br />
+        &lt;h4 class=&quot;card-title&quot;&gt;Заголовок карточки 1&lt;/h4&gt;
         <br />
+        &lt;p class=&quot;card-description&quot;&gt; <br />
+        Текст - описание для карточки 1. <br />
+        &lt;/p&gt; <br />
+        &lt;/li&gt; <br />
+        &lt;li class=&quot;card&quot;&gt; <br />
+        &lt;h4 class=&quot;card-title&quot;&gt;Заголовок карточки 2&lt;/h4&gt;
         <br />
-        Атрибут style как правило используется в JavaScript, наравне с
-        использованием стилей через добавлением или удалением классов.
-      </p>
-      <p class="warning">
-        Предпочтительно стили задавать через классы, т.к. это упрощает
-        разработку и поддержку веб-приложения.
-      </p>
-      <h4>Задание</h4>
-      <p>
-        Задайте элементу div инлайн стили CSS со свойством background-color и
-        значением orange, со свойством color и значением navy.
-        <br />
-        <br />
-        Обратите внимание на более высокий приоритет у инлайн-стилей по
-        сравнению с классом и id.
-      </p>
-      &lt;div class=&quot;warning&quot; id=&quot;inline&quot;
-      style=&quot;background-color:orange;color:navy&quot;&gt;
-      <br />Инлайн стили нежелательно использовать из-за более высокого
-      приоритета чем у id, а также из-за сложности c поддержкой и повторным
-      использованием кода. <br />
-      &lt;/div&gt;
-    </div>
+        &lt;p class=&quot;card-description&quot;&gt; <br />
+        Текст - описание для карточки 2. <br />
+        &lt;/p&gt; <br />
+        &lt;/li&gt;<br />
+        &lt;li class=&quot;card last-of-type&quot;&gt; <br />
+        &lt;h4 class=&quot;card-title&quot;&gt;Заголовок карточки
+        3&lt;/h4&gt;<br />
+        &lt;p class=&quot;card-description&quot;&gt; <br />
+        Текст - описание для карточки 3. <br />
+        &lt;/p&gt; <br />
+        &lt;/li&gt; <br />
+        &lt;/ul&gt; <br />
+      </div>
 
-    <button class="accordion">task 15</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Значение !important добавляется после значения css свойства через
-        пробел.
-      </p>
-      <p class="warning">
-        Использование этого способа изменить приоритет является плохим тоном и
-        не рекомендуется к применению. В данном задании мы знакомим с этим
-        приемом для понимания самого механизма изменения приоритета.
-      </p>
-      <br />
-      <br />
-      <b>ПРИМЕР</b>
-      <br />
-      <br />
-      <p>
-        a { <br />
-        color: red !important; <br />
-        }
+      <button class="accordion">task 22</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Цвет текста для ссылок не наследуется. Если свойство не наследуется,
+          то такое свойство для элемента надо задать отдельно.
+        </p>
+        <h4>Задание</h4>
+        <p>
+          Т.к. цвет текста для ссылок не наследуется, то задай ссылке цвет
+          green, используя класс в качестве селектора
+        </p>
+        &lt;ul class=&quot;list&quot;&gt; <br />
+        &lt;li class=&quot;list-item&quot;&gt;По умолчанию в браузере цвет
+        текста - черный&lt;/li&gt; <br />
+        &lt;li class=&quot;list-item&quot;&gt;&lt;a class=&quot;list-link&quot;
+        href=&quot;#&quot;&gt;По умолчанию в браузере цвет ссылки - синий с
+        подчеркиванием&lt;/a&gt;&lt;/li&gt; <br />
+        &lt;li class=&quot;list-item&quot;&gt;По умолчанию у списка
+        `padding-left` равен `40px`&lt;/li&gt; <br />
+        &lt;/ul&gt;
+      </div>
+
+      <button class="accordion">task 23</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Т.к. правила CSS с равными селекторами, но записанными в тексте
+          последними, перезапишут предыдущие значения для одинаковых свойств, то
+          порядок подключения файлов CSS имеет значение. Файл modern-normalize
+          переопределяет некоторые стили браузера для удобства работы.
+        </p>
+        <h4>Задание</h4>
+        <p>
+          Подключите в правильном порядке файлы стилей, расположенных в папке
+          css:
+        </p>
+        <ol>
+          <li>css/modern-normalize.css</li>
+          <li>css/style.css</li>
+        </ol>
+        &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; <br />
+        &lt;head&gt;<br />
+        &lt;meta charset=&quot;UTF-8&quot;&gt; <br />
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+        initial-scale=1.0&quot;&gt; <br />
+        &lt;title&gt;Document&lt;/title&gt; <br />
+        &lt;!-- Пишите ваш код ниже --&gt; <br />
+        &lt;!-- Пишите ваш код выше --&gt; <br />
+        &lt;/head&gt;<br />
+        &lt;body&gt; <br />
+        &lt;/body&gt; <br />&lt;/html&gt;
+      </div>
+
+      <button class="accordion">task 24</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Цвет текста задается свойством color Цвет фона задается свойством
+          background-color Значением этого свойства может быть запись в 4-х
+          форматах
+        </p>
+        <ul>
+          <li>именованные цвета (black, white и т.д)</li>
+          <li>
+            rgb цвета (rgb(0,0,0), rgb(255,255,255) или rgb(100%,100%,100%) и
+            т.д)
+          </li>
+          <li>hex цвета (#000 или #000000, #fff или #ffffff и т.д)</li>
+          <li>hsl цвета (hsl(0,0%,0%), hsl(0,0%,100%) и т.д)</li>
+        </ul>
+        <p>
+          Именованные цвета не рекомендуется использовать из-за более долгой
+          обработки такой записи браузером, но они очень удобны для демонстрации
+          примеров работы CSS. Формат rgb наиболее интуитивно понятен, и его
+          чаще используют при копировании цвета из макета. Формат hex занимает
+          меньше места и его используют с целью сокращения объема файла. Формат
+          hsl удобен для получения оттенков цвета и его используют для создания
+          палитр, теней и т.п. В rgb используется три цвета: r - red, g - green,
+          b - blue. Все три цвета можно задать числами в диапазоне
+        </p>
+        <ul>
+          <li>от 0 до 255</li>
+          <li>от 0% до 100%</li>
+        </ul>
+        <p class="warning">
+          Именованный цвет green не совпадает с максимальным значением зеленого
+          цвета в `rgb`, `hex` или `hsl` формате
+        </p>
+        <h4>Задание</h4>
+        <p>В формате rgb, используя только значения от 0 до 255:</p>
+        <ul>
+          <li>задай классу box белый цвет текста и черный фон</li>
+          <li>задай классу red максимально красный фон</li>
+          <li>задай классу green максимально зеленый фон</li>
+          <li>задай классу blue максимально синий фон</li>
+        </ul>
+        &lt;div class=&quot;box&quot;&gt;Белый текст на черном фоне.&lt;/div&gt;
         <br />
+        &lt;div class=&quot;box red&quot;&gt;Белый текст на красном
+        фоне.&lt;/div&gt; <br />
+        &lt;div class=&quot;box green&quot;&gt;Белый текст на зеленом
+        фоне.&lt;/div&gt; <br />
+        &lt;div class=&quot;box blue&quot;&gt;Белый текст на синем
+        фоне.&lt;/div&gt;
+      </div>
+
+      <button class="accordion">task 25</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Цвета в hex формате задаются с помощью символа # и перечислением
+          значений цветов по порядку - красный, зеленый, синий. Значения
+          записываются в 16-ричном формате. Все три цвета можно задать числами в
+          диапазоне от 0 до ff (ff это 255 в 16-ричной системе счисления). Всего
+          получается 7 символов, включая #:
+        </p>
+        a {color: #11aabb}
+        <p>
+          Если все три цвета состоят из одинаковых символов, то рекомендуется
+          сократить запись - по одному символу на один цвет:
+        </p>
+        /* тот же цвет в сокращенной записи*/ <br />
+        a {color: #1ab}
+        <h4>Задание</h4>
+        <p>В сокращенном hex формате</p>
+
+        <ul>
+          <li>задай классу box белый цвет текста и черный фон;</li>
+          <li>задай классу red максимально красный фон;</li>
+          <li>задай классу green максимально зеленый фон;</li>
+          <li>задай классу blue максимально синий фон.</li>
+        </ul>
+        &lt;div class=&quot;box&quot;&gt;Белый текст на черном фоне.&lt;/div&gt;
         <br />
-        &lt;div style=&quot;color: navy !important;&quot;&gt; <br />
-        Это css свойство невозможно ничем переопределить, т.к. сочетание инлайн
-        и `!important` создают высший приоритет. Не используйте такой способ!
+        &lt;div class=&quot;box red&quot;&gt;Белый текст на красном
+        фоне.&lt;/div&gt; <br />
+        &lt;div class=&quot;box green&quot;&gt;Белый текст на зеленом
+        фоне.&lt;/div&gt; <br />
+        &lt;div class=&quot;box blue&quot;&gt;Белый текст на синем
+        фоне.&lt;/div&gt; <br />
+      </div>
+
+      <button class="accordion">task 26</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Цвет hsl имеет необычные параметры, но достаточно научиться управлять
+          третьим параметром lightness или яркостью, чтобы получать более темные
+          или светлые оттенки выбранного цвета и при этом всегда попадать в
+          правильный тон, гармонично сочетающийся с исходным цветом. Это может
+          понадобится для ситуации, когда hover не прорисован для всех цветов
+          темы. В таких случаях достаточно перевести цвет в формат hsl и
+          изменить lightness на 10% или более процентов. При смене темы стоит
+          уделять внимание контрастности цвета фона и цвета текста - если фон
+          темный, то надо подбирать светлый цвет для текста и наоборот. Текст
+          без коррекции контраста с фоном:
+        </p>
+        <img src="/images/task26-1.jpg" alt="" />
+        <p>Текст после коррекции контраста с фоном:</p>
+        <img src="/images/task26-2.jpg" alt="" />
+        <h4>Задание</h4>
+        <p>
+          Сделай цвет текста контрастным - добавь белый цвет в формате hsl для
+          классов lightness-25 и lightness-0
+        </p>
+        &lt;h2&gt;h. s. lightness&lt;/h2&gt; <br />
+        &lt;div class=&quot;lightness lightness-100&quot;&gt;100%&lt;/div&gt;
+        <br />
+        &lt;div class=&quot;lightness lightness-75&quot;&gt;75%&lt;/div&gt;
+        <br />
+        &lt;div class=&quot;lightness lightness-50&quot;&gt;50%&lt;/div&gt;
+        <br />
+        &lt;div class=&quot;lightness lightness-25&quot;&gt;25%&lt;/div&gt;
+        <br />
+        &lt;div class=&quot;lightness lightness-0&quot;&gt;0&lt;/div&gt; <br />
+      </div>
+
+      <button class="accordion">task 27</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Отличие между свойством opacity и цветом прозрачности transparent:
+          Пример наследования opacity
+        </p>
+        <ul>
+          <li>
+            opacity меняет прозрачность всех свойств элемента, связанных с
+            цветом, а также прозрачность потомков элементов. Это ограничивает
+            возможность применения свойства.
+          </li>
+          <li>
+            transparent это название цвета 'прозрачный', подобно названию белый
+            - white или черный - black. Поэтому такое название можно применять
+            для цвета текста, фона и т.п.
+          </li>
+        </ul>
+        <p>Пример наследования opacity</p>
+        <img src="./images/photo3.jpg" alt="" />
+        <h4>Задание</h4>
+        <ol>
+          <li>
+            Задай свойство opacity селекторам .opacity:hover и .opacity:focus
+            так, чтобы прозрачность отсутствовала.
+          </li>
+          <li>
+            Задай свойству background-color селекторам .transparent:hover и
+            .transparent:focus значение - именованный цвет прозрачности.
+          </li>
+        </ol>
+        &lt;div class=&quot;container&quot;&gt; <br />
+        &lt;div class=&quot;box opacity&quot;&gt;Opacity&lt;/div&gt; <br />
+        &lt;div class=&quot;box transparent&quot;&gt;Transparent&lt;/div&gt;
         <br />
         &lt;/div&gt;
+      </div>
 
-        <br />
-        <br />
-        Расчет приоритета при применении значения !important происходит так,
-        словно рангу селектора добавилось еще 4-ре ранга с более высоким
-        приоритетом. Что-то вроде добавления приставки 0.
-      </p>
-      <h4>Задание</h4>
-      <p>
-        Добавь !important обеим значениям свойств селектора div. Обрати внимание
-        на то что у div приоритет изменился и стал более высоким чем у инлайн.
-      </p>
-      &lt;div class=&quot;warning&quot; id=&quot;inline&quot;
-      style=&quot;background-color: orange; color: navy;&quot;&gt;
-      <br />Использование !important крайне нежелательно. Этот способ повысить
-      приоритет до неизменяемого применяют обычно только для оформления
-      предупреждений или сообщений об ошибках приложения. <br />&lt;/div&gt;
+      <button class="accordion">task 28</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Чтобы получить удобство opacity в получении градаций прозрачности, но
+          иметь возможность применять прозрачность только к определенному цвету
+          используют альфа-канал. Это особый синтаксис для знакомой записи цвета
+          в форматах rgb, hsl и hex. В предыдущем примере мы выяснили, что
+          недостаток transparency - отсутствие градаций, а недостаток opacity -
+          неизбирательность (применятся ко всем цветам). Чтобы избавиться от
+          этих недостатков к форматам rgb, hsl и hex можно добавить 4-е значение
+          - прозрачность или по другому - альфа-канал. Синтаксис записи цвета с
+          альфа-каналом:
+        </p>
+        <ul>
+          <li>
+            rgba: rgba(Red,Green,Blue, Alfa), где значения Alfa меняется как у
+            свойства opacity, т.е. от 0 до 1 с помощью дробных чисел. Например
+            .5 - полупрозрачность.
+          </li>
+          <li>
+            hsla: hsla(Color, Saturation, Lightness, Alfa), где значения Alfa
+            меняется как у свойства opacity, т.е. от 0 до 1 с помощью дробных
+            чисел. Например .5 - полупрозрачность.
+          </li>
+          <li>
+            hexa: #RRGGBBAA, где AA - значения Alfa. Это меняется как у opacity
+            , но в 16-ричном формате. Т.е. от 0 до FF. Например .5 = 80.
+          </li>
+        </ul>
+        <h4>Задание</h4>
+        <ol>
+          <li>
+            Задай свойству background-color селектору [data-color="rgba"]:hover
+            значение - полупрозрачный цвет в формате rgba вместо заданного в
+            формате rgb.
+          </li>
+          <li>
+            Задай свойству background-color селектору [data-color="hsla"]:hover
+            значение - полупрозрачный цвет в формате hsla вместо заданного в
+            формате hsl.
+          </li>
+          <li>
+            Задай свойству background-color селектору [data-color="hexa"]:hover
+            значение - полупрозрачный цвет в формате hexa вместо заданного в
+            формате hex.
+          </li>
+        </ol>
+        &lt;button data-color=&quot;rgba&quot;&gt;rgba&lt;/button&gt; <br />
+        &lt;button data-color=&quot;hsla&quot;&gt;hsla&lt;/button&gt; <br />
+        &lt;button data-color=&quot;hexa&quot;&gt;hexa&lt;/button&gt; <br />
+      </div>
+
+      <script src="./js/script.js"></script>
     </div>
-
-    <button class="accordion">task 16</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>Прямой потомок элемента в селекторе задается с помощью символа ></p>
-      <b>ПРИМЕР</b>
-      <br />
-      <br />
-      &lt;section&gt; <br />
-      &lt;div&gt; <br />
-      &lt;h4&gt;Заголовок&lt;/h4&gt; <br />
-      &lt;/div&gt; <br />
-      &lt;/section&gt;
-      <br />
-      <br />
-      section &gt; div {} <br />
-      div &gt; h4 {}
-
-      <h4>Задание</h4>
-      <p>
-        Добавь к селектору menu-item еще один класс menu так, чтобы оба свойства
-        display и vertical-align применились только к прямым потомкам класса
-        menu, но не к потомкам sub-menu.
-      </p>
-      &lt;ul class=&quot;menu&quot;&gt; <br />
-      &lt;li class=&quot;menu-item&quot;&gt; <br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Меню 1&lt;/a&gt;
-      <br />
-      &lt;/li&gt; <br />
-      &lt;li class=&quot;menu-item&quot;&gt; <br />
-      &lt;ul class=&quot;sub-menu&quot;&gt; <br />
-      &lt;li class=&quot;menu-item&quot;&gt; <br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
-      1&lt;/a&gt; <br />
-      &lt;/li&gt; <br />
-      &lt;li class=&quot;menu-item&quot;&gt; <br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
-      2&lt;/a&gt;
-      <br />
-      &lt;/li&gt; <br />&lt;li class=&quot;menu-item&quot;&gt;<br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
-      3&lt;/a&gt;
-      <br />
-      &lt;/li&gt; <br />
-      &lt;/ul&gt; <br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Меню 2&lt;/a&gt;
-      <br />&lt;/li&gt; <br />
-      &lt;li class=&quot;menu-item&quot;&gt; <br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Меню 3&lt;/a&gt;
-      <br />
-      &lt;/li&gt; <br />
-      &lt;/ul&gt;
-    </div>
-
-    <button class="accordion">task 17</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-
-      <p>
-        Любой потомок элемента в селекторе задается с помощью пробела между
-        селектором элемента и его потомками любого уровня вложенности. Первый
-        потомок элемента задается символом > между селектором элемента и
-        селектором потомка.
-      </p>
-      <br />
-      <br />
-      <b>ПРИМЕР</b>
-      <br />
-      <br />
-      &lt;section&gt; <br />
-      &lt;div class=&quot;first&quot;&gt; <br />
-      &lt;h4&gt;Заголовок&lt;/h4&gt;<br />
-      &lt;div&gt; Непрямой потомок section&lt;/div&gt; <br />
-      &lt;/div&gt; <br />
-      &lt;div class=&quot;first&quot;&gt;1&lt;/div&gt; <br />
-      &lt;/section&gt;
-      <p>Любой потомок для элемента section это все div и h4:</p>
-      section div {} <br />
-      section h4 {}
-      <p>Первый потомок для элемента section это div с классом first:</p>
-      section &gt; div {}
-      <h4>Задание</h4>
-      <p>
-        В html коде дано меню, которое содержит два подменю, вложенных одно в
-        другое. В css кода все подменю с классом sub-menu скрыты с помощью
-        свойства opacity. Необходимо разместить элементы li списка с классом
-        menu по горизонтали, а li списков с классом sub-menu должны остаться в
-        вертикальном положении. Также при наведении курсором на элемент li
-        должно показываться скрытое меню. Для этого
-      </p>
-      <ol>
-        <li>
-          Добавь к селектору menu все элементы с селектором класса menu-item,
-          которые являются первыми потомками списка с классом menu.
-        </li>
-        <li>
-          Добавь к селектору sub-menu все элементы с селектором класса
-          menu-item, которые являются потомками списка с классом sub-menu на
-          любом уровне вложенности.
-        </li>
-        <li>
-          Добавь к селектору menu-item:hover все элементы, которые являются
-          потомками элемента с классом menu-item на любом уровне вложенности.
-        </li>
-      </ol>
-      <p>
-        Обрати внимание на поведение элементов меню при hover до и после
-        успешного выполнения задания.
-      </p>
-      &lt;ul class=&quot;menu&quot;&gt;<br />
-      &lt;li class=&quot;menu-item&quot;&gt;<br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Меню
-      1&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li class=&quot;menu-item&quot;&gt; <br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Меню 2 ▼&lt;/a&gt;
-      <br />
-      &lt;ul class=&quot;sub-menu&quot;&gt;<br />
-      &lt;li class=&quot;menu-item&quot;&gt;<br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
-      1&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li class=&quot;menu-item&quot;&gt;<br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню 2
-      ▼&lt;/a&gt;<br />
-      &lt;ul class=&quot;sub-menu&quot;&gt;<br />
-      &lt;li class=&quot;menu-item&quot;&gt;<br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
-      1&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li class=&quot;menu-item&quot;&gt;<br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
-      2&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li class=&quot;menu-item&quot;&gt;<br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
-      3&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;/ul&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li class=&quot;menu-item&quot;&gt;<br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
-      3&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li class=&quot;menu-item&quot;&gt;<br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Sub Меню
-      4&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;/ul&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;li class=&quot;menu-item&quot;&gt;<br />
-      &lt;a href=&quot;#&quot; class=&quot;menu-link&quot;&gt;Меню
-      3&lt;/a&gt;<br />
-      &lt;/li&gt;<br />
-      &lt;/ul&gt; <br />
-    </div>
-
-    <button class="accordion">task 18</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Отсчет соседства связан с потоком выполнения - т.е. началом отсчета
-        соседства считается элемент, который написан и прочитан браузером
-        первым. Первый сосед в селекторе задается с помощью символа + Примеры с
-        объяснением какой элемент является первым соседом.
-      </p>
-      <b>ПРИМЕР</b>
-      <br />
-      <br />
-      &lt;section class=&quot;first&quot;&gt; <br />
-      Элемент <br />
-      &lt;/section&gt; <br />
-      &lt;section class=&quot;first-neighbor&quot;&gt;<br />
-      1-й сосед <br />
-      &lt;/section&gt; <br />
-      &lt;section class=&quot;second-neighbor&quot;&gt;<br />
-      2-й сосед <br />
-      &lt;/section&gt; <br />
-      &lt;section class=&quot;third-neighbor&quot;&gt;<br />
-      3-й сосед <br />
-      &lt;/section&gt;
-      <p>
-        Запишем селектор соседства для элемента section с классом first так,
-        чтобы был выбран элемент с классом first-neighbor
-      </p>
-      <br />
-      <br />
-      .first + section {color: red;}
-      <h4>Задание</h4>
-      <p>
-        Добавь к селектору item-1 еще один класс item так, чтобы свойство color:
-        red применилось только к первому соседу - элементу с классом item-2
-      </p>
-      &lt;ul class=&quot;items&quot;&gt;<br />
-      &lt;li class=&quot;item item-1&quot;&gt;1-й сосед&lt;/li&gt;<br />
-      &lt;li class=&quot;item item-2&quot;&gt;2-й сосед&lt;/li&gt;<br />
-      &lt;li class=&quot;item item-3&quot;&gt;3-й сосед&lt;/li&gt; <br />&lt;li
-      class=&quot;item item-4&quot;&gt;4-й сосед&lt;/li&gt;<br />
-      &lt;/ul&gt;
-    </div>
-
-    <button class="accordion">task 19</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Отсчет соседства связан с потоком выполнения - т.е. соседними элементами
-        считаются все элементы, написанные в коде после заданного селектором и
-        имеющие общего прямого родителя. Любой нижний сосед для селектора
-        задается с помощью символа ~ Примеры с объяснением какой элемент
-        является первым соседом.
-      </p>
-      <b>ПРИМЕР</b>
-      <br />
-      <br />
-      &lt;section class=&quot;zero&quot;&gt;сосед сверху&lt;/section&gt; <br />
-      &lt;section class=&quot;first&quot;&gt;Элемент&lt;/section&gt; <br />
-      &lt;section class=&quot;first-neighbor&quot;&gt;1-й
-      сосед&lt;/section&gt;<br />
-      &lt;section class=&quot;second-neighbor&quot;&gt;2-й
-      сосед&lt;/section&gt;<br />
-      &lt;section class=&quot;third-neighbor&quot;&gt;3-й сосед&lt;/section&gt;
-      <p>
-        Запишем селектор соседства для класса first так, чтобы был выбран
-        элемент с классами first-neighbor, second-neighbor и third-neighbor:
-      </p>
-      .first ~ section { <br />
-      color: red; <br />
-      }
-      <h4>Задание</h4>
-      <p>
-        Добавь к селектору item-2 еще один класс item так, чтобы свойство color
-        со значением red применилось ко всем нижним соседям этого элемента. Т.е.
-        правило должно примениться к элементам с классом item-3 и item-4. Ни к
-        каким другим элементам color: red больше применяться не должно.
-      </p>
-      &lt;ul class=&quot;items&quot;&gt; <br />
-      &lt;li class=&quot;item item-1&quot;&gt;1-й сосед&lt;/li&gt; <br />
-      &lt;li class=&quot;item item-2&quot;&gt;2-й сосед&lt;/li&gt; <br />
-      &lt;li class=&quot;item item-3&quot;&gt;3-й сосед&lt;/li&gt; <br />
-      &lt;li class=&quot;item item-4&quot;&gt;4-й сосед&lt;/li&gt; <br />
-      &lt;/ul&gt;
-    </div>
-
-    <button class="accordion">task 20</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Если есть свойство, для которого записано несколько CSS правил с
-        селекторами одинакового "веса", то значения будут перезаписаны и в итоге
-        применится значение из написанного последним CSS правила.
-      </p>
-      <h4>Задание</h4>
-      <p>
-        Не меняя селекторы и правила CSS сделай так, чтобы цвет текста всех
-        элементов стал maroon (перемести CSS правила).
-      </p>
-      &lt;h4 class=&quot;title headline&quot;
-      title=&quot;1&quot;&gt;1&lt;/h4&gt; <br />
-      &lt;h4 class=&quot;title headline&quot;
-      title=&quot;2&quot;&gt;2&lt;/h4&gt; <br />
-      &lt;h4 class=&quot;title headline&quot;
-      title=&quot;3&quot;&gt;3&lt;/h4&gt;
-    </div>
-
-    <button class="accordion">task 21</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Некоторые свойства CSS могут передавать значение элементам html,
-        являющимися потомками элемента выделенного селектором. Например цвет
-        текста - наследуется (за некоторыми исключениями, одному из которых
-        посвящено следующее задание ).
-      </p>
-      <h4>Задание</h4>
-      <p>
-        В коде html есть элемент ul с классом cards и есть последний элемент li
-        с классом last-of-type. С помощью наследования нужно изменить цвет
-        текста для элементов-потомков этих двух элементов. Для этого необходимо:
-      </p>
-      <ul>
-        <li>селектору класса cards задать цвет текста navy;</li>
-        <li>селектору класса last-of-type задать цвет текста firebrick.</li>
-      </ul>
-      &lt;ul class=&quot;cards&quot;&gt; <br />
-      &lt;li class=&quot;card&quot;&gt; <br />
-      &lt;h4 class=&quot;card-title&quot;&gt;Заголовок карточки 1&lt;/h4&gt;
-      <br />
-      &lt;p class=&quot;card-description&quot;&gt; <br />
-      Текст - описание для карточки 1. <br />
-      &lt;/p&gt; <br />
-      &lt;/li&gt; <br />
-      &lt;li class=&quot;card&quot;&gt; <br />
-      &lt;h4 class=&quot;card-title&quot;&gt;Заголовок карточки 2&lt;/h4&gt;
-      <br />
-      &lt;p class=&quot;card-description&quot;&gt; <br />
-      Текст - описание для карточки 2. <br />
-      &lt;/p&gt; <br />
-      &lt;/li&gt;<br />
-      &lt;li class=&quot;card last-of-type&quot;&gt; <br />
-      &lt;h4 class=&quot;card-title&quot;&gt;Заголовок карточки 3&lt;/h4&gt;<br />
-      &lt;p class=&quot;card-description&quot;&gt; <br />
-      Текст - описание для карточки 3. <br />
-      &lt;/p&gt; <br />
-      &lt;/li&gt; <br />
-      &lt;/ul&gt; <br />
-    </div>
-
-    <button class="accordion">task 22</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Цвет текста для ссылок не наследуется. Если свойство не наследуется, то
-        такое свойство для элемента надо задать отдельно.
-      </p>
-      <h4>Задание</h4>
-      <p>
-        Т.к. цвет текста для ссылок не наследуется, то задай ссылке цвет green,
-        используя класс в качестве селектора
-      </p>
-      &lt;ul class=&quot;list&quot;&gt; <br />
-      &lt;li class=&quot;list-item&quot;&gt;По умолчанию в браузере цвет текста
-      - черный&lt;/li&gt; <br />
-      &lt;li class=&quot;list-item&quot;&gt;&lt;a class=&quot;list-link&quot;
-      href=&quot;#&quot;&gt;По умолчанию в браузере цвет ссылки - синий с
-      подчеркиванием&lt;/a&gt;&lt;/li&gt; <br />
-      &lt;li class=&quot;list-item&quot;&gt;По умолчанию у списка `padding-left`
-      равен `40px`&lt;/li&gt; <br />
-      &lt;/ul&gt;
-    </div>
-
-    <button class="accordion">task 23</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Т.к. правила CSS с равными селекторами, но записанными в тексте
-        последними, перезапишут предыдущие значения для одинаковых свойств, то
-        порядок подключения файлов CSS имеет значение. Файл modern-normalize
-        переопределяет некоторые стили браузера для удобства работы.
-      </p>
-      <h4>Задание</h4>
-      <p>
-        Подключите в правильном порядке файлы стилей, расположенных в папке css:
-      </p>
-      <ol>
-        <li>css/modern-normalize.css</li>
-        <li>css/style.css</li>
-      </ol>
-      &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; <br />
-      &lt;head&gt;<br />
-      &lt;meta charset=&quot;UTF-8&quot;&gt; <br />
-      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
-      initial-scale=1.0&quot;&gt; <br />
-      &lt;title&gt;Document&lt;/title&gt; <br />
-      &lt;!-- Пишите ваш код ниже --&gt; <br />
-      &lt;!-- Пишите ваш код выше --&gt; <br />
-      &lt;/head&gt;<br />
-      &lt;body&gt; <br />
-      &lt;/body&gt; <br />&lt;/html&gt;
-    </div>
-
-    <button class="accordion">task 24</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Цвет текста задается свойством color Цвет фона задается свойством
-        background-color Значением этого свойства может быть запись в 4-х
-        форматах
-      </p>
-      <ul>
-        <li>именованные цвета (black, white и т.д)</li>
-        <li>
-          rgb цвета (rgb(0,0,0), rgb(255,255,255) или rgb(100%,100%,100%) и т.д)
-        </li>
-        <li>hex цвета (#000 или #000000, #fff или #ffffff и т.д)</li>
-        <li>hsl цвета (hsl(0,0%,0%), hsl(0,0%,100%) и т.д)</li>
-      </ul>
-      <p>
-        Именованные цвета не рекомендуется использовать из-за более долгой
-        обработки такой записи браузером, но они очень удобны для демонстрации
-        примеров работы CSS. Формат rgb наиболее интуитивно понятен, и его чаще
-        используют при копировании цвета из макета. Формат hex занимает меньше
-        места и его используют с целью сокращения объема файла. Формат hsl
-        удобен для получения оттенков цвета и его используют для создания
-        палитр, теней и т.п. В rgb используется три цвета: r - red, g - green, b
-        - blue. Все три цвета можно задать числами в диапазоне
-      </p>
-      <ul>
-        <li>от 0 до 255</li>
-        <li>от 0% до 100%</li>
-      </ul>
-      <p class="warning">
-        Именованный цвет green не совпадает с максимальным значением зеленого
-        цвета в `rgb`, `hex` или `hsl` формате
-      </p>
-      <h4>Задание</h4>
-      <p>В формате rgb, используя только значения от 0 до 255:</p>
-      <ul>
-        <li>задай классу box белый цвет текста и черный фон</li>
-        <li>задай классу red максимально красный фон</li>
-        <li>задай классу green максимально зеленый фон</li>
-        <li>задай классу blue максимально синий фон</li>
-      </ul>
-      &lt;div class=&quot;box&quot;&gt;Белый текст на черном фоне.&lt;/div&gt;
-      <br />
-      &lt;div class=&quot;box red&quot;&gt;Белый текст на красном
-      фоне.&lt;/div&gt; <br />
-      &lt;div class=&quot;box green&quot;&gt;Белый текст на зеленом
-      фоне.&lt;/div&gt; <br />
-      &lt;div class=&quot;box blue&quot;&gt;Белый текст на синем
-      фоне.&lt;/div&gt;
-    </div>
-
-    <button class="accordion">task 25</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Цвета в hex формате задаются с помощью символа # и перечислением
-        значений цветов по порядку - красный, зеленый, синий. Значения
-        записываются в 16-ричном формате. Все три цвета можно задать числами в
-        диапазоне от 0 до ff (ff это 255 в 16-ричной системе счисления). Всего
-        получается 7 символов, включая #:
-      </p>
-      a {color: #11aabb}
-      <p>
-        Если все три цвета состоят из одинаковых символов, то рекомендуется
-        сократить запись - по одному символу на один цвет:
-      </p>
-      /* тот же цвет в сокращенной записи*/ <br />
-      a {color: #1ab}
-      <h4>Задание</h4>
-      <p>В сокращенном hex формате</p>
-
-      <ul>
-        <li>задай классу box белый цвет текста и черный фон;</li>
-        <li>задай классу red максимально красный фон;</li>
-        <li>задай классу green максимально зеленый фон;</li>
-        <li>задай классу blue максимально синий фон.</li>
-      </ul>
-      &lt;div class=&quot;box&quot;&gt;Белый текст на черном фоне.&lt;/div&gt;
-      <br />
-      &lt;div class=&quot;box red&quot;&gt;Белый текст на красном
-      фоне.&lt;/div&gt; <br />
-      &lt;div class=&quot;box green&quot;&gt;Белый текст на зеленом
-      фоне.&lt;/div&gt; <br />
-      &lt;div class=&quot;box blue&quot;&gt;Белый текст на синем
-      фоне.&lt;/div&gt; <br />
-    </div>
-
-    <button class="accordion">task 26</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Цвет hsl имеет необычные параметры, но достаточно научиться управлять
-        третьим параметром lightness или яркостью, чтобы получать более темные
-        или светлые оттенки выбранного цвета и при этом всегда попадать в
-        правильный тон, гармонично сочетающийся с исходным цветом. Это может
-        понадобится для ситуации, когда hover не прорисован для всех цветов
-        темы. В таких случаях достаточно перевести цвет в формат hsl и изменить
-        lightness на 10% или более процентов. При смене темы стоит уделять
-        внимание контрастности цвета фона и цвета текста - если фон темный, то
-        надо подбирать светлый цвет для текста и наоборот. Текст без коррекции
-        контраста с фоном:
-      </p>
-      <img src="/images/task26-1.jpg" alt="" />
-      <p>Текст после коррекции контраста с фоном:</p>
-      <img src="/images/task26-2.jpg" alt="" />
-      <h4>Задание</h4>
-      <p>
-        Сделай цвет текста контрастным - добавь белый цвет в формате hsl для
-        классов lightness-25 и lightness-0
-      </p>
-      &lt;h2&gt;h. s. lightness&lt;/h2&gt; <br />
-      &lt;div class=&quot;lightness lightness-100&quot;&gt;100%&lt;/div&gt;
-      <br />
-      &lt;div class=&quot;lightness lightness-75&quot;&gt;75%&lt;/div&gt; <br />
-      &lt;div class=&quot;lightness lightness-50&quot;&gt;50%&lt;/div&gt; <br />
-      &lt;div class=&quot;lightness lightness-25&quot;&gt;25%&lt;/div&gt; <br />
-      &lt;div class=&quot;lightness lightness-0&quot;&gt;0&lt;/div&gt; <br />
-    </div>
-
-    <button class="accordion">task 27</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Отличие между свойством opacity и цветом прозрачности transparent:
-        Пример наследования opacity
-      </p>
-      <ul>
-        <li>
-          opacity меняет прозрачность всех свойств элемента, связанных с цветом,
-          а также прозрачность потомков элементов. Это ограничивает возможность
-          применения свойства.
-        </li>
-        <li>
-          transparent это название цвета 'прозрачный', подобно названию белый -
-          white или черный - black. Поэтому такое название можно применять для
-          цвета текста, фона и т.п.
-        </li>
-      </ul>
-      <p>Пример наследования opacity</p>
-      <img src="./images/photo3.jpg" alt="" />
-      <h4>Задание</h4>
-      <ol>
-        <li>
-          Задай свойство opacity селекторам .opacity:hover и .opacity:focus так,
-          чтобы прозрачность отсутствовала.
-        </li>
-        <li>
-          Задай свойству background-color селекторам .transparent:hover и
-          .transparent:focus значение - именованный цвет прозрачности.
-        </li>
-      </ol>
-      &lt;div class=&quot;container&quot;&gt; <br />
-      &lt;div class=&quot;box opacity&quot;&gt;Opacity&lt;/div&gt; <br />
-      &lt;div class=&quot;box transparent&quot;&gt;Transparent&lt;/div&gt;
-      <br />
-      &lt;/div&gt;
-    </div>
-
-    <button class="accordion">task 28</button>
-    <div class="panel">
-      <h3>Теория к заданию</h3>
-      <p>
-        Чтобы получить удобство opacity в получении градаций прозрачности, но
-        иметь возможность применять прозрачность только к определенному цвету
-        используют альфа-канал. Это особый синтаксис для знакомой записи цвета в
-        форматах rgb, hsl и hex. В предыдущем примере мы выяснили, что
-        недостаток transparency - отсутствие градаций, а недостаток opacity -
-        неизбирательность (применятся ко всем цветам). Чтобы избавиться от этих
-        недостатков к форматам rgb, hsl и hex можно добавить 4-е значение -
-        прозрачность или по другому - альфа-канал. Синтаксис записи цвета с
-        альфа-каналом:
-      </p>
-      <ul>
-        <li>
-          rgba: rgba(Red,Green,Blue, Alfa), где значения Alfa меняется как у
-          свойства opacity, т.е. от 0 до 1 с помощью дробных чисел. Например .5
-          - полупрозрачность.
-        </li>
-        <li>
-          hsla: hsla(Color, Saturation, Lightness, Alfa), где значения Alfa
-          меняется как у свойства opacity, т.е. от 0 до 1 с помощью дробных
-          чисел. Например .5 - полупрозрачность.
-        </li>
-        <li>
-          hexa: #RRGGBBAA, где AA - значения Alfa. Это меняется как у opacity ,
-          но в 16-ричном формате. Т.е. от 0 до FF. Например .5 = 80.
-        </li>
-      </ul>
-      <h4>Задание</h4>
-      <ol>
-        <li>
-          Задай свойству background-color селектору [data-color="rgba"]:hover
-          значение - полупрозрачный цвет в формате rgba вместо заданного в
-          формате rgb.
-        </li>
-        <li>
-          Задай свойству background-color селектору [data-color="hsla"]:hover
-          значение - полупрозрачный цвет в формате hsla вместо заданного в
-          формате hsl.
-        </li>
-        <li>
-          Задай свойству background-color селектору [data-color="hexa"]:hover
-          значение - полупрозрачный цвет в формате hexa вместо заданного в
-          формате hex.
-        </li>
-      </ol>
-      &lt;button data-color=&quot;rgba&quot;&gt;rgba&lt;/button&gt; <br />
-      &lt;button data-color=&quot;hsla&quot;&gt;hsla&lt;/button&gt; <br />
-      &lt;button data-color=&quot;hexa&quot;&gt;hexa&lt;/button&gt; <br />
-    </div>
-
-    <script src="./js/script.js"></script>
   </body>
 </html>

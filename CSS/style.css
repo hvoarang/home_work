@@ -1,3 +1,8 @@
+body {
+  font-family: "Roboto";
+  font-size: 20px;
+}
+
 h2 {
   text-align: center;
 }
@@ -8,6 +13,16 @@ img {
 
 * div {
   margin-bottom: 20px;
+}
+
+.wrapper {
+  background-color: #ccc;
+  padding: 10px;
+  border: 1px solid rgb(236, 234, 234);
+  border-radius: 8px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .accordion {
@@ -27,14 +42,26 @@ img {
 
 .active,
 .accordion:hover {
+  border: 1px solid rgb(175, 174, 175);
+
   background-color: #ccc;
+
+  box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
+
 }
 
 .panel {
+  border-radius: 8px;
   padding: 0 18px;
   display: none;
   background-color: white;
   overflow: hidden;
+
+  box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
 }
 
 .warning {
