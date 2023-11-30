@@ -19,7 +19,7 @@ img {
 
 /*pc ------------------------------------------------------------------------------*/
 
-@media (max-width: 1087px) {
+@media (min-width: 1087px) {
 
   .panel,
   .accordion,
@@ -31,7 +31,7 @@ img {
 
 /*tablet-------------------------------------------------------------------------------*/
 
-@media (max-width: 991.98px) {
+@media (min-width: 991.98px) {
 
   .panel,
   .accordion,
@@ -47,7 +47,7 @@ img {
 
 /*mobile*/
 
-@media (max-width: 767.98px) {
+@media (min-width: 767.98px) {
 
   .panel,
   .accordion,
@@ -63,7 +63,7 @@ img {
 
 /*mobile small -------------------------------------------------------------------------*/
 
-@media (max-width: 479.98px) {
+@media (min-width: 479.98px) {
 
   .panel,
   .accordion,
