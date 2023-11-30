@@ -23,7 +23,8 @@ img {
 
   .panel,
   .accordion,
-  .wrapper {
+  .wrapper,
+  .warning {
     max-width: 970px;
   }
 }
@@ -34,8 +35,13 @@ img {
 
   .panel,
   .accordion,
-  .wrapper {
+  .wrapper,
+  .warning {
     max-width: 750px;
+  }
+
+  img {
+    width: 80%;
   }
 }
 
@@ -45,17 +51,29 @@ img {
 
   .panel,
   .accordion,
-  .wrapper {
+  .wrapper,
+  .warning {
     max-width: none;
+  }
+
+  img {
+    width: 50%;
   }
 }
 
 /*mobile small -------------------------------------------------------------------------*/
 
 @media (max-width: 479.98px) {
-  .header__logo {
-    flex: 0 0 40px;
-    overflow: hidden;
+
+  .panel,
+  .accordion,
+  .wrapper,
+  .warning {
+    max-width: none;
+  }
+
+  img {
+    width: 25%;
   }
 }
 
