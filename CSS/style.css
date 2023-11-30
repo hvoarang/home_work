@@ -17,52 +17,35 @@ img {
   margin-bottom: 20px;
 }
 
-/*pc ------------------------------------------------------------------------------*/
-
-
-@media (min-width: 1201px) {
-
-  .panel,
-  .accordion,
-  .wrapper,
-  .warning {
-    width: 1200px;
+/* PC */
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    width: 1280px;
   }
 }
 
-/*tablet-------------------------------------------------------------------------------*/
+/* ========================================= */
 
-@media (min-width: 768px) {
-
-  .panel,
-  .accordion,
-  .wrapper,
-  .warning {
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .wrapper {
     width: 768px;
   }
-
-  img {
-    width: 80%;
-  }
 }
 
+/* ========================================= */
 
-
-/*mobile small -------------------------------------------------------------------------*/
-
-@media (min-width: 480px) {
-
-  .panel,
-  .accordion,
-  .wrapper,
-  .warning {
+/* mobile */
+@media screen and (min-width: 480px) {
+  .wrapper {
     width: 480px;
   }
-
-  img {
-    width: 25%;
-  }
 }
+
+/* ========================================= */
+
+
+
 
 .wrapper {
   overflow: hidden;
