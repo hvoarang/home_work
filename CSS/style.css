@@ -19,25 +19,26 @@ img {
 
 /*pc ------------------------------------------------------------------------------*/
 
-@media (min-width: 1087px) {
+
+@media (min-width: 1201px) {
 
   .panel,
   .accordion,
   .wrapper,
   .warning {
-    max-width: 970px;
+    width: 1200px;
   }
 }
 
 /*tablet-------------------------------------------------------------------------------*/
 
-@media (min-width: 991.98px) {
+@media (min-width: 768px) {
 
   .panel,
   .accordion,
   .wrapper,
   .warning {
-    max-width: 750px;
+    width: 768px;
   }
 
   img {
@@ -45,31 +46,17 @@ img {
   }
 }
 
-/*mobile*/
 
-@media (min-width: 767.98px) {
-
-  .panel,
-  .accordion,
-  .wrapper,
-  .warning {
-    max-width: none;
-  }
-
-  img {
-    width: 50%;
-  }
-}
 
 /*mobile small -------------------------------------------------------------------------*/
 
-@media (min-width: 479.98px) {
+@media (min-width: 480px) {
 
   .panel,
   .accordion,
   .wrapper,
   .warning {
-    max-width: none;
+    width: 480px;
   }
 
   img {
